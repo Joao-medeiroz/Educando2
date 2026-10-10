@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>Educando - Encontre oportunidades para transformar seu futuro</title>
+  <meta name="title" content="Educando - Encontre oportunidades para transformar seu futuro">
+  <meta name="description"
+    content="Conectamos estudantes e jovens a cursos, estágios, empregos, idiomas e intercâmbios.">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.svg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
+  <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.svg" width="173" height="50" alt="Logo Educando">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.svg" width="173" height="50" alt="Logo Educando">
+          </a>
+
+          <button class="nav-close-btn" aria-label="fechar menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./sobre.html" class="navbar-link" data-nav-link>Sobre</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./oportunidades.html" class="navbar-link" data-nav-link>Oportunidades</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./contato.html" class="navbar-link" data-nav-link>Contato</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="header-action-btn" aria-label="pesquisar" title="Pesquisar" data-search-btn>
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="header-action-btn" aria-label="abrir menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" id="home" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.svg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 section-title">
+              Encontre <span class="span">oportunidades</span> para transformar seu futuro.
+            </h1>
+
+            <p class="hero-text">
+              Conectamos estudantes e jovens a cursos, estágios, empregos e oportunidades de desenvolvimento
+              profissional.
+            </p>
+
+            <a href="./oportunidades.html" class="btn has-before">
+              <span class="span">explorar oportunidades</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner">
+
+            <div class="img-holder one" style="--width: 270; --height: 300;">
+              <img src="./assets/images/hero-banner-1.jpg" width="270" height="300" alt="Estudante sorrindo"
+                class="img-cover">
+            </div>
+
+            <div class="img-holder two" style="--width: 240; --height: 370;">
+              <img src="./assets/images/hero-banner-2.jpg" width="240" height="370" alt="Estudante com livros"
+                class="img-cover">
+            </div>
+
+            <img src="./assets/images/hero-shape-1.svg" width="380" height="190" alt="" class="shape hero-shape-1">
+
+            <img src="./assets/images/hero-shape-2.png" width="622" height="551" alt="" class="shape hero-shape-2">
+
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CATEGORY
+      -->
+
+      <section class="section category" aria-label="category">
+        <div class="container">
+
+          <p class="section-subtitle">Categorias</p>
+
+          <h2 class="h2 section-title">
+            Quatro caminhos para <span class="span">transformar</span> o seu futuro
+          </h2>
+
+          <p class="section-text">
+            Estudos, trabalho, idiomas e experiências no exterior: escolha a área que mais combina com o seu momento e comece a explorar.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="category-card" style="--color: 170, 75%, 41%">
+
+                <div class="card-icon">
+                  <img src="./assets/images/category-cursos.svg" width="40" height="40" loading="lazy"
+                    alt="Cursos, faculdades e cursinhos" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="./oportunidades.html#cursos" class="card-title">Cursos, faculdades e cursinhos</a>
+                </h3>
+
+                <p class="card-text">
+                  Bolsas, cursinhos populares e vagas em cursos e faculdades para você estudar e se preparar para o
+                  futuro.
+                </p>
+
+                <span class="card-badge">Ver oportunidades</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 351, 83%, 61%">
+
+                <div class="card-icon">
+                  <img src="./assets/images/category-emprego.svg" width="40" height="40" loading="lazy"
+                    alt="Estágio, emprego e Jovem Aprendiz" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="./oportunidades.html#emprego" class="card-title">Estágio, emprego e Jovem Aprendiz</a>
+                </h3>
+
+                <p class="card-text">
+                  Vagas para dar o primeiro passo na carreira e ganhar experiência no mercado de trabalho.
+                </p>
+
+                <span class="card-badge">Ver oportunidades</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 229, 75%, 58%">
+
+                <div class="card-icon">
+                  <img src="./assets/images/category-idiomas.svg" width="40" height="40" loading="lazy" alt="Idiomas"
+                    class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="./oportunidades.html#idiomas" class="card-title">Idiomas</a>
+                </h3>
+
+                <p class="card-text">
+                  Cursos gratuitos e acessíveis de inglês, espanhol e outras línguas, presenciais e online.
+                </p>
+
+                <span class="card-badge">Ver oportunidades</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 42, 94%, 55%">
+
+                <div class="card-icon">
+                  <img src="./assets/images/category-intercambio.svg" width="40" height="40" loading="lazy" alt="Intercâmbio"
+                    class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="./oportunidades.html#intercambio" class="card-title">Intercâmbio</a>
+                </h3>
+
+                <p class="card-text">
+                  Bolsas e programas para estudar no exterior e viver uma experiência internacional.
+                </p>
+
+                <span class="card-badge">Ver oportunidades</span>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT (conversa com a página de contato)
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner">
+
+            <div class="img-holder" style="--width: 520; --height: 370;">
+              <img src="./assets/images/about-banner.jpg" width="520" height="370" loading="lazy"
+                alt="Jovens estudando juntos" class="img-cover">
+            </div>
+
+            <img src="./assets/images/about-shape-1.svg" width="360" height="420" loading="lazy" alt=""
+              class="shape about-shape-1">
+
+            <img src="./assets/images/about-shape-2.svg" width="371" height="220" loading="lazy" alt=""
+              class="shape about-shape-2">
+
+            <img src="./assets/images/about-shape-3.png" width="722" height="528" loading="lazy" alt=""
+              class="shape about-shape-3">
+
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle">Fale com a gente</p>
+
+            <h2 class="h2 section-title">
+              Informação é o primeiro passo para <span class="span">mudar de vida</span>
+            </h2>
+
+            <p class="section-text">
+              Acreditamos que muita gente não deixa de aproveitar boas oportunidades por falta de interesse, mas por
+              falta de acesso à informação. Por isso, reunimos tudo em um só lugar. Ficou com alguma dúvida ou quer
+              sugerir uma oportunidade? Estamos aqui para ajudar.
+            </p>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Oportunidades reunidas em um só lugar</span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Conteúdo gratuito e de fácil acesso</span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Orientação para dar o próximo passo</span>
+              </li>
+
+            </ul>
+
+            <a href="./contato.html" class="text-link">
+              <span class="span">Preencha nosso formulário de contato</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+            <img src="./assets/images/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
+              class="shape about-shape-4">
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #NEWS (cards preenchidos por assets/js/noticias.js)
+      -->
+
+      <section class="section news" id="noticias" aria-label="notícias">
+        <div class="container">
+
+          <p class="section-subtitle">Notícias do dia</p>
+
+          <h2 class="h2 section-title">Fique por dentro do que acontece na educação</h2>
+
+          <div class="news-carousel">
+
+            <ul class="news-track" data-news-track aria-live="polite">
+              <!-- os cards são gerados pelo script.js a partir de noticias.js -->
+            </ul>
+
+            <div class="news-controls">
+
+              <button class="news-btn" aria-label="notícia anterior" data-news-prev>
+                <ion-icon name="arrow-back-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+              <button class="news-btn" aria-label="próxima notícia" data-news-next>
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #VIDEO
+      -->
+
+      <section class="video has-bg-image" aria-label="video"
+        style="background-image: url('./assets/images/video-bg.png')">
+        <div class="container">
+
+          <div class="video-card">
+
+            <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
+              <img src="./assets/images/video-banner.jpg" width="970" height="550" loading="lazy" alt="video banner"
+                class="img-cover">
+
+              <button class="play-btn" aria-label="play video">
+                <ion-icon name="play" aria-hidden="true"></ion-icon>
+              </button>
+            </div>
+
+            <img src="./assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
+              class="shape video-shape-1">
+
+            <img src="./assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
+              class="shape video-shape-2">
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURED (destaque de cada área)
+      -->
+
+      <section class="section featured" aria-label="oportunidades em destaque">
+        <div class="container">
+
+          <p class="section-subtitle">Oportunidades em destaque</p>
+
+          <h2 class="h2 section-title">Uma oportunidade de cada área para você começar</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                  <img src="./assets/images/course-1.jpg" width="370" height="220" loading="lazy"
+                    alt="Estágio pelo CIEE" class="img-cover">
+                </figure>
+
+                <div class="abs-badge">
+                  <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+                  <span class="span">Todo o Brasil</span>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="badge">Estágio</span>
+
+                  <h3 class="h3">
+                    <a href="https://www.ciee.org.br" class="card-title" target="_blank" rel="noopener">Estágio pelo
+                      CIEE</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Cadastre seu currículo e concorra a vagas de estágio para estudantes do ensino médio, técnico e
+                    superior.
+                  </p>
+
+                  <span class="card-link">
+                    <span class="span">Saiba mais</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                  <img src="./assets/images/course-2.jpg" width="370" height="220" loading="lazy"
+                    alt="Cursinho Popular da Poli-USP" class="img-cover">
+                </figure>
+
+                <div class="abs-badge">
+                  <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+                  <span class="span">São Paulo</span>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="badge">Cursinho</span>
+
+                  <h3 class="h3">
+                    <a href="https://cursinhopoliusp.com.br" class="card-title" target="_blank"
+                      rel="noopener">Cursinho Popular da Poli-USP</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Preparatório para vestibulares e Enem mantido por estudantes da Poli-USP. Confira datas, valores e
+                    edital no site oficial.
+                  </p>
+
+                  <span class="card-link">
+                    <span class="span">Saiba mais</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                  <img src="./assets/images/course-3.jpg" width="370" height="220" loading="lazy"
+                    alt="Cursos de inglês gratuitos" class="img-cover">
+                </figure>
+
+                <div class="abs-badge">
+                  <ion-icon name="laptop-outline" aria-hidden="true"></ion-icon>
+
+                  <span class="span">Online</span>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="badge">Inglês gratuito</span>
+
+                  <h3 class="h3">
+                    <a href="https://www.ifsp.edu.br" class="card-title" target="_blank" rel="noopener">Inglês
+                      gratuito nos Institutos Federais</a>
+                  </h3>
+
+                  <p class="card-text">
+                    O IFSP abre turmas gratuitas de inglês a distância ao longo do ano. Acompanhe os editais no site
+                    do instituto.
+                  </p>
+
+                  <span class="card-link">
+                    <span class="span">Saiba mais</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                  <img src="./assets/images/hero-banner-1.jpg" width="270" height="300" loading="lazy"
+                    alt="Intercâmbio do Governo de SP" class="img-cover">
+                </figure>
+
+                <div class="abs-badge">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                  <span class="span">3 meses</span>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="badge">Intercâmbio</span>
+
+                  <h3 class="h3">
+                    <a href="https://www.bnewssaopaulo.com.br/noticias/politica/veja-como-se-inscrever-no-programa-de-intercambio-gratuito-do-governo-de-sp.html"
+                      class="card-title" target="_blank" rel="noopener">Intercâmbio gratuito do Governo de SP</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Alunos da rede estadual estudam três meses no exterior, com despesas cobertas. A seleção começa no
+                    9º ano.
+                  </p>
+
+                  <span class="card-link">
+                    <span class="span">Saiba mais</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="./oportunidades.html" class="btn has-before">
+            <span class="span">Ver todas as oportunidades</span>
+
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo-light.svg" width="173" height="50" alt="Logo Educando">
+          </a>
+
+          <p class="footer-brand-text">
+            Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
+          </p>
+
+          <div class="wrapper">
+            <span class="span">Add:</span>
+
+            <address class="address">70-80 Upper St Norwich NR2</address>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Call:</span>
+
+            <a href="tel:+011234567890" class="footer-link">+01 123 4567 890</a>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Email:</span>
+
+            <a href="mailto:info@eduweb.com" class="footer-link">info@eduweb.com</a>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Online Platform</p>
+          </li>
+
+          <li>
+            <a href="./sobre.html" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="./oportunidades.html" class="footer-link">Courses</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Instructor</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Events</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Instructor Profile</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Purchase Guide</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Links</p>
+          </li>
+
+          <li>
+            <a href="./contato.html" class="footer-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Gallery</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">News & Articles</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ's</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sign In/Registration</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Coming Soon</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          Copyright 2022 All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="voltar ao topo" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link (noticias.js precisa vir antes do script.js)
+  -->
+  <script src="./assets/js/noticias.js" defer></script>
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
