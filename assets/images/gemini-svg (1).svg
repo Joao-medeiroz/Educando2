@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 180" width="100%" height="100%">
+  <defs>
+    <!-- Sombra suave e elegante para o card -->
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <style>
+    .name {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      fill: #1a1a1a;
+      text-anchor: middle;
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 6px;
+      font-weight: 400;
+      fill: #777777;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Fundo do Card (metade do tamanho) -->
+  <path d="M 12 0 
+           H 128 
+           A 12 12 0 0 1 140 12 
+           V 168 
+           A 12 12 0 0 1 128 180 
+           H 40 
+           Q 20 180 14 158
+           Q 12 144 12 132
+           V 12 
+           A 12 12 0 0 1 24 0 Z" 
+        fill="#ffffff" 
+        filter="url(#shadow)"/>
+
+  <!-- Ícone Circular / Gráfico de Progresso proporcional -->
+  <g transform="translate(70, 45)">
+    <!-- Fundo do círculo -->
+    <circle cx="0" cy="0" r="21" fill="#fdf6ec"/>
+    <!-- Arco de Progresso Amarelo/Laranja -->
+    <path d="M 0 -17 A 17 17 0 1 1 -12.02 12.02" 
+          fill="none" 
+          stroke="#ffb703" 
+          stroke-width="4.5" 
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Textos ajustados -->
+  <text x="70" y="86" class="name">Ray Sanchez</text>
+  <text x="70" y="101" class="subtitle">Criando caminhos</text>
+  <text x="70" y="111" class="subtitle">além do extraordinário</text>
+</svg>

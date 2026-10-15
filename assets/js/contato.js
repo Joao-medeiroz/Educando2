@@ -1,74 +1,114 @@
 'use strict';
 
 /**
- * página Contato: validação e envio do formulário pelo Formspree
- * troque SEU_ID_AQUI, no action do formulário (contato.html), pelo seu endereço do Formspree
+ * Página Contato: validação e envio pelo Web3Forms
  */
 
 (function () {
-
   const form = document.querySelector("[data-contact-form]");
   const status = document.querySelector("[data-form-status]");
 
-  if (!form) return;
+  if (!form || !status) return;
+
+  const nome = form.querySelector("#nome");
+  const email = form.querySelector("#email");
+  const telefone = form.querySelector("#telefone");
+  const mensagem = form.querySelector("#mensagem");
 
   const setStatus = function (message, type) {
     status.textContent = message;
     status.className = "form-status " + (type || "");
-  }
+  };
 
   const isValidEmail = function (value) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-  }
+  };
 
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const nome = form.nome.value.trim();
-    const email = form.email.value.trim();
-    const telefone = form.telefone.value.trim();
-    const mensagem = form.mensagem.value.trim();
+    const nomeValue = nome.value.trim();
+    const emailValue = email.value.trim();
+    const telefoneValue = telefone.value.trim();
+    const mensagemValue = mensagem.value.trim();
 
-    form.querySelectorAll(".input").forEach(function (field) { field.classList.remove("invalid"); });
+    form.querySelectorAll(".input").forEach(function (field) {
+      field.classList.remove("invalid");
+    });
 
     const fail = function (field, message) {
       field.classList.add("invalid");
       field.focus();
       setStatus(message, "error");
+    };
+
+    if (!nomeValue) {
+      return fail(nome, "Informe o seu nome.");
     }
 
-    if (!nome) return fail(form.nome, "Informe o seu nome.");
-    if (!isValidEmail(email)) return fail(form.email, "Informe um e-mail válido.");
-    if (telefone && telefone.replace(/\D/g, "").length < 10) return fail(form.telefone, "Informe um telefone com DDD.");
-    if (!mensagem) return fail(form.mensagem, "Escreva a sua mensagem.");
+    if (!isValidEmail(emailValue)) {
+      return fail(email, "Informe um e-mail válido.");
+    }
 
-    if (form.action.includes("SEU_ID_AQUI")) {
-      setStatus("O envio ainda não foi configurado. Troque SEU_ID_AQUI pelo endereço do seu Formspree.", "error");
-      return;
+    if (
+      telefoneValue &&
+      telefoneValue.replace(/\D/g, "").length < 10
+    ) {
+      return fail(telefone, "Informe um telefone com DDD.");
+    }
+
+    if (!mensagemValue) {
+      return fail(mensagem, "Escreva a sua mensagem.");
     }
 
     const button = form.querySelector("button[type='submit']");
+    const buttonLabel = button.querySelector(".span");
+    const originalLabel = buttonLabel.textContent;
+
     button.disabled = true;
-    setStatus("Enviando...", "");
+    buttonLabel.textContent = "Enviando...";
+    setStatus("Enviando sua mensagem...", "");
 
     try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { "Accept": "application/json" }
-      });
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: new FormData(form),
+          headers: {
+            Accept: "application/json"
+          }
+        }
+      );
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         form.reset();
-        setStatus("Mensagem enviada! Em breve entraremos em contato.", "success");
+
+        form.querySelectorAll(".input").forEach(function (field) {
+          field.classList.remove("invalid");
+        });
+
+        setStatus(
+          "Mensagem enviada! Em breve entraremos em contato.",
+          "success"
+        );
       } else {
-        setStatus("Não foi possível enviar agora. Tente novamente em instantes.", "error");
+        setStatus(
+          data.message ||
+            "Não foi possível enviar a mensagem. Tente novamente.",
+          "error"
+        );
       }
     } catch (error) {
-      setStatus("Sem conexão. Verifique a internet e tente novamente.", "error");
+      setStatus(
+        "Falha na conexão. Verifique a internet e tente novamente.",
+        "error"
+      );
+    } finally {
+      button.disabled = false;
+      buttonLabel.textContent = originalLabel;
     }
-
-    button.disabled = false;
   });
-
 })();
