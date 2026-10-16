@@ -32,6 +32,7 @@ window.INTEGRANTES = {
     { nome: "Arthur Gonçalves", cargo: "Colaborador" },
     { nome: "Victor Gabriel", cargo: "Colaborador" },
     { nome: "Augusto Gimenes", cargo: "Colaborador" },
+    { nome: "Nicolas Lira", cargo: "Colaborador" },
     { nome: "João Victor", cargo: "Colaborador" }
   ],
   pesquisa: [
@@ -39,7 +40,6 @@ window.INTEGRANTES = {
     { nome: "Mirela Nascimento", cargo: "Colaborador" },
     { nome: "Thamiris Santos", cargo: "Colaborador" },
     { nome: "Maria Fernanda", cargo: "Colaborador" },
-    { nome: "Nicolas Lira", cargo: "Colaborador" },
     { nome: "Livia Magalhães", cargo: "Colaborador" }
   ],
 
