@@ -1,0 +1,58 @@
+{
+  "_comentario": "Opções online curadas, mostradas na seção 'Opções online' do chat. Links oficiais apenas. 'tags' ajudam a encontrar o recurso pelo assunto. Não precisa rodar nenhum script.",
+  "cursos": [
+    {
+      "titulo": "Portal oficial do Enem (Inep)",
+      "descricao": "Informações oficiais sobre inscrições, provas e cronograma.",
+      "link": "https://www.gov.br/inep/pt-br",
+      "tags": ["enem", "prova", "vestibular", "faculdade"]
+    },
+    {
+      "titulo": "Escola Virtual.Gov",
+      "descricao": "Cursos online gratuitos do Governo Federal, com certificado.",
+      "link": "https://www.escolavirtual.gov.br",
+      "tags": ["curso", "gratuito", "certificado", "gestao", "administracao", "publico"]
+    },
+    {
+      "titulo": "UNA-SUS (Universidade Aberta do SUS)",
+      "descricao": "Cursos gratuitos e online do Ministério da Saúde para quem atua ou quer atuar na área da saúde.",
+      "link": "https://www.unasus.gov.br",
+      "tags": ["saude", "enfermagem", "cuidado", "cuidar", "pessoas", "atendimento", "sus", "hospital", "medicina", "bem-estar"]
+    },
+    {
+      "titulo": "Santander Open Academy",
+      "descricao": "Plataforma do Santander com cursos online gratuitos em tecnologia, negócios, finanças, marketing e idiomas, com certificado.",
+      "link": "https://www.santander.com/es/accionistas-e-inversores/yo-soy-accionista/promociones/santander-open-academy",
+      "tags": ["tecnologia", "negocios", "financas", "marketing", "gestao", "empreendedorismo", "ingles", "idiomas", "carreira", "dados"]
+    },
+    {
+      "titulo": "AWS Skill Builder (Amazon Web Services)",
+      "descricao": "Treinamentos oficiais da Amazon em computação em nuvem e inteligência artificial, com boa parte do conteúdo gratuito.",
+      "link": "https://skillbuilder.aws",
+      "tags": ["programacao", "tecnologia", "ti", "nuvem", "cloud", "computacao", "inteligencia", "desenvolvimento", "dados"]
+    }
+  ],
+  "emprego": [
+    {
+      "titulo": "Emprega Brasil (Ministério do Trabalho)",
+      "descricao": "Portal oficial de vagas de emprego do governo federal, em todos os níveis: estágio, júnior, pleno e sênior.",
+      "link": "https://empregabrasil.mte.gov.br/",
+      "tags": ["vaga", "vagas", "emprego", "trabalho", "junior", "pleno", "senior", "estagio", "carreira", "recolocacao"]
+    },
+    {
+      "titulo": "Programa Jovem Aprendiz (Ministério do Trabalho)",
+      "descricao": "Regras e informações oficiais sobre o programa de aprendizagem.",
+      "link": "https://www.gov.br/trabalho-e-emprego/pt",
+      "tags": ["aprendiz", "jovem", "aprendizagem"]
+    }
+  ],
+  "idiomas": [
+    {
+      "titulo": "LearnEnglish (British Council)",
+      "descricao": "Cursos gratuitos de inglês em diferentes níveis.",
+      "link": "https://learnenglish.britishcouncil.org",
+      "tags": ["ingles", "english", "idioma"]
+    }
+  ],
+  "intercambio": []
+}

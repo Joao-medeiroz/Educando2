@@ -1,7 +1,7 @@
-"""Regras locais: resolvem saudações e buscas simples sem chamar a IA."""
+"""Regras locais: resolvem saudações e buscas simples sem chamar a IA (sem gastar tokens)."""
 import re
 
-from .opportunities import CATEGORIAS, normalizar
+from .opportunities import CATEGORIAS, limpar_palavras, normalizar
 
 SAUDACOES = {"oi", "ola", "bom dia", "boa tarde", "boa noite", "e ai", "eae"}
 
@@ -13,16 +13,20 @@ TERMOS_POR_CATEGORIA = {
     "intercambio": ["intercambio", "exterior", "internacional", "estudar fora"],
 }
 
-TEXTO_SAUDACAO = (
-    "Olá! Sou o assistente do Educando. Posso buscar cursos, faculdades, estágios e vagas, "
-    "idiomas e intercâmbios. O que você está procurando?"
+TEXTO_SAUDACAO = "Oi, tudo bem? Eu sou o Edu, assistente do Educando. Você está precisando de alguma oportunidade?"
+TEXTO_SEM_CATEGORIA = "Posso te ajudar com cursos, estágios e vagas, idiomas ou intercâmbio. Sobre qual deles você quer saber?"
+TEXTO_PERFIL = (
+    "Que bom que você está explorando! Me conta um pouquinho: você está no ensino médio, na faculdade "
+    "ou já se formou?"
 )
+TEXTO_DIRECIONAR = (
+    "Me conta um pouco mais sobre o que você gosta e sobre sua situação atual, assim consigo indicar "
+    "caminhos mais certeiros."
+)
+TEXTO_DETALHE = "Aqui estão os detalhes que temos no Educando sobre essa oportunidade:"
 TEXTO_FALLBACK = (
-    "No momento não consigo interpretar sua mensagem com a ajuda da IA. "
-    "Tente escrever uma categoria: cursos, emprego, idiomas ou intercâmbio."
-)
-TEXTO_SEM_CATEGORIA = (
-    "Posso ajudar com cursos, estágios e vagas, idiomas ou intercâmbio. Sobre qual deles você quer saber?"
+    "Não consegui entender sua mensagem agora. Tente falar de cursos, estágios e vagas, "
+    "idiomas ou intercâmbio."
 )
 
 
@@ -41,17 +45,35 @@ def interpretar(mensagem: str) -> dict:
         if any(termo in texto for termo in termos)
     ]
     if len(encontradas) == 1:
-        return {"intencao": "busca", "categoria": encontradas[0], "palavras": palavras}
+        return {"intencao": "busca", "categoria": encontradas[0], "palavras": limpar_palavras(mensagem)}
     if len(encontradas) > 1:
-        # Mais de uma categoria: busca em todas (sem filtrar categoria).
-        return {"intencao": "busca", "categoria": None, "palavras": palavras}
+        return {"intencao": "busca", "categoria": None, "palavras": limpar_palavras(mensagem)}
 
     return {"intencao": "desconhecida"}
 
 
-def montar_texto_busca(categoria, quantidade: int) -> str:
-    if quantidade == 0:
-        return "Não encontrei oportunidades para essa busca. Tente outras palavras ou uma categoria diferente."
+NOME_PLURAL = {
+    "cursos": "cursos e faculdades",
+    "emprego": "estágios e vagas",
+    "idiomas": "cursos de idiomas",
+    "intercambio": "intercâmbios",
+}
+
+
+def _opcoes(quantidade: int) -> str:
+    return "opção" if quantidade == 1 else "opções"
+
+
+def texto_com_resultados(categoria, quantidade: int) -> str:
+    """Texto padrão para os cards. Só é usado se a IA não estiver disponível."""
     if categoria is None:
-        return f"Encontrei {quantidade} oportunidade(s) que combinam com sua busca:"
-    return f"Encontrei {quantidade} oportunidade(s) em {CATEGORIAS[categoria]}:"
+        return f"Encontrei {quantidade} {_opcoes(quantidade)} que podem te interessar. Dá uma olhada:"
+    return f"Encontrei {quantidade} {_opcoes(quantidade)} em {NOME_PLURAL[categoria]}. Dá uma olhada:"
+
+
+def texto_sem_resultados(categoria, tem_online: bool = False) -> str:
+    """Texto padrão sem resultados no site. Só é usado se a IA não estiver disponível."""
+    onde = "" if categoria is None else f" em {NOME_PLURAL[categoria]}"
+    if tem_online:
+        return f"Ainda não tenho oportunidades cadastradas{onde} no Educando, mas encontrei estas opções online:"
+    return f"Ainda não tenho oportunidades cadastradas{onde} no Educando."

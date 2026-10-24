@@ -2695,3 +2695,112 @@ textarea.input { resize: vertical; min-height: 140px; }
     bottom: 90px;
   }
 }
+
+/* caminhos úteis (quando não há resultado) */
+.chat-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-self: flex-start;
+  max-width: 85%;
+}
+
+.chat-links-titulo {
+  font-family: var(--ff-poppins);
+  font-size: 1.2rem;
+  color: var(--gray-web);
+}
+
+.chat-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: var(--radius-10);
+  background-color: var(--white);
+  box-shadow: var(--shadow-1);
+  color: var(--kappel);
+  font-family: var(--ff-poppins);
+  font-size: 1.3rem;
+  font-weight: var(--fw-500);
+  text-decoration: none;
+}
+
+.chat-link:hover {
+  text-decoration: underline;
+}
+
+/* links dentro do chat: não dependem das regras gerais do template */
+.chatbot .chat-card-link,
+.chatbot .chat-link {
+  color: var(--kappel);
+  text-decoration: underline;
+  opacity: 1;
+  visibility: visible;
+}
+
+.chatbot .chat-card {
+  align-self: stretch;
+}
+
+/* Chat isolado do CSS geral do template: textos e links sempre visíveis dentro do Edu */
+.chatbot,
+.chatbot * {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.chatbot .chat-bot {
+  color: var(--eerie-black-1) !important;
+  background-color: var(--white) !important;
+}
+
+.chatbot .chat-user {
+  color: var(--white) !important;
+  background-color: var(--kappel) !important;
+}
+
+.chatbot .chat-card {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+  padding: 0 !important;
+}
+
+.chatbot .chat-card-body {
+  padding: 10px 12px 12px !important;
+}
+
+.chatbot .chat-card-tipo {
+  display: block !important;
+  color: var(--gray-web) !important;
+  font-family: var(--ff-poppins) !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 2px !important;
+}
+
+.chatbot .chat-card-titulo,
+.chatbot .chat-card h3 {
+  display: block !important;
+  color: var(--eerie-black-1) !important;
+  font-family: var(--ff-league_spartan) !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  margin: 2px 0 4px !important;
+}
+
+.chatbot .chat-card-descricao,
+.chatbot .chat-card p {
+  display: block !important;
+  color: var(--eerie-black-1) !important;
+  font-family: var(--ff-poppins) !important;
+  font-size: 1.3rem !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+.chatbot .chat-card-link,
+.chatbot .chat-link {
+  color: var(--kappel) !important;
+  text-decoration: underline !important;
+  font-family: var(--ff-poppins) !important;
+  font-size: 1.3rem !important;
+}

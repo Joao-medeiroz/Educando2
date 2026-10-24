@@ -16,3 +16,5 @@ ALLOWED_ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "").split(","
 MAX_MENSAGEM_CHARS = 500
 MAX_OPORTUNIDADES = 4
 RATE_LIMIT_POR_MINUTO = int(os.getenv("RATE_LIMIT_POR_MINUTO", "10"))
+
+RECURSOS_PATH = BASE_DIR / "data" / "recursos_oficiais.json"

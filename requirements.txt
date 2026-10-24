@@ -1,4 +1,4 @@
-# Dependências de produção (usadas pelo código em backend/app)
+# Dependências de produção do back-end (a Vercel lê este arquivo na raiz)
 fastapi==0.117.1
 pydantic>=2.0
 uvicorn>=0.30
