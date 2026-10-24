@@ -40,13 +40,16 @@ def interpretar_com_ia(mensagem: str) -> dict:
             config=types.GenerateContentConfig(
                 system_instruction=INSTRUCOES,
                 response_mime_type="application/json",
-                max_output_tokens=120,
+                max_output_tokens=1024,
                 temperature=0,
             ),
         )
-        dados = json.loads(resposta.text)
+        dados = json.loads(resposta.text or "")
+        if not isinstance(dados, dict):
+            raise ValueError("resposta do modelo não é um objeto JSON")
     except Exception as erro:
-        # Não registramos a mensagem do usuário nem a chave; só o tipo do erro.
+        # Registra só o tipo e um trecho do erro, sem chave nem mensagem do usuário.
+        print("Gemini falhou:", type(erro).__name__, str(erro)[:200])
         raise IAIndisponivel(type(erro).__name__) from None
 
     categoria = dados.get("categoria")

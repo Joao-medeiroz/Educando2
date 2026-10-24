@@ -84,8 +84,8 @@ def chat(corpo: ChatRequest, request: Request):
     )
 @app.get("/api/diagnostico-gemini")
 def diagnostico_gemini():
-        try:
-            _obter_cliente().models.generate_content(model=GEMINI_MODEL, contents="ok")
-            return {"ok": True, "modelo": GEMINI_MODEL}
-        except Exception as erro:
-            return {"ok": False, "erro": type(erro).__name__, "detalhe": str(erro)[:200]}    
+    try:
+        resultado = interpretar_com_ia("estou procurando oportunidades na área da saúde")
+        return {"ok": True, "resultado": resultado}
+    except IAIndisponivel as erro:
+        return {"ok": False, "erro": str(erro)} 
