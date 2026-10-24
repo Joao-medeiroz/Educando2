@@ -8,7 +8,7 @@ DATA_PATH = BASE_DIR / "data" / "oportunidades.json"
 # Chave do Gemini: somente no back-end, via variável de ambiente.
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 # Modelo configurável: os nomes e limites do Gemini mudam; confira em ai.google.dev.
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash-lite")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 
 # Origens permitidas para CORS (vazio = nenhuma). Ex.: "http://localhost:5500"
 ALLOWED_ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "").split(",") if o.strip()]
