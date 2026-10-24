@@ -1,54 +1,75 @@
-<div align="center">
-  
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/eduweb)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/eduweb?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/eduweb?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/x26bQPxcFX4?style=social)](https://youtu.be/x26bQPxcFX4)
+# Educando
 
-  <br />
-  <br />
+Portal de oportunidades educacionais e profissionais (cursos, estágios e vagas, idiomas e intercâmbios).
 
-  <h2 align="center">eduweb - Education Website</h2>
+## Estrutura
 
-  EduWeb is a fully responsive education website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
-
-  <a href="https://codewithsadee.github.io/eduweb/"><strong>➥ Live Demo</strong></a>
-
-</div>
-
-<br />
-
-### Demo Screeshots
-
-![EduWeb Desktop Demo](./readme-images/desktop.png "Desktop Demo")
-
-### Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
-
-### Run Locally
-
-To run **EduWeb** locally, run this command on your git bash:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/eduweb.git
+```
+educando/
+├── index.html, sobre.html, oportunidades.html, contato.html, favicon.svg
+├── assets/
+│   ├── css/style.css
+│   ├── js/                 scripts da interface e dados (dados-oportunidades.js é a fonte)
+│   └── images/             organizadas por uso: logo, categorias, oportunidades, noticias,
+│                           home, sobre, ilustracoes
+├── backend/                chatbot (FastAPI + Gemini)
+│   ├── app/                código do back-end
+│   ├── data/oportunidades.json   gerado a partir do JS (não edite à mão)
+│   ├── scripts/exportar_oportunidades.js
+│   ├── tests/
+│   ├── server.py           ponto de entrada
+│   └── requirements*.txt
+└── docs/guia-de-estilo.md
 ```
 
-Windows:
+## Como atualizar as oportunidades
 
-```bash
-git clone https://github.com/codewithsadee/eduweb.git
+1. Edite apenas `assets/js/dados-oportunidades.js`.
+2. Na raiz do projeto, rode `node backend/scripts/exportar_oportunidades.js`.
+3. Confirme com `node backend/scripts/exportar_oportunidades.js --verificar`.
+
+Antes de publicar, rode o `--verificar` junto com os testes do back-end.
+
+## Rodar o back-end no Windows (PowerShell)
+
+Pré-requisitos: Python 3.12 e Node.js instalados e disponíveis no `PATH`.
+
+```powershell
+cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements-dev.txt
+
+# chave do Gemini, só nesta sessão do terminal
+$env:GEMINI_API_KEY = "sua-chave-aqui"
+
+python -m pytest -q
+python -m uvicorn server:app --reload
 ```
 
-### Contact
+Para testar sem a IA, basta não definir `GEMINI_API_KEY`: saudações e buscas simples continuam funcionando.
 
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+Se o PowerShell bloquear a ativação do venv, rode uma vez:
+`Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`
 
-### License
+## Segurança
 
-This project is **free to use** and does not contains any license.
+- A chave do Gemini existe apenas no back-end, em variável de ambiente. Nunca vai para HTML, JS ou Git.
+- `.env` está no `.gitignore`.
+- A IA só interpreta a mensagem. Oportunidades, links e prazos vêm sempre da base local.
+
+## Limitações conhecidas
+
+- A limitação de frequência é feita em memória, por instância. Em hospedagem serverless, a contagem pode se reiniciar.
+- Nenhuma conversa é guardada: cada mensagem é tratada de forma independente.
+- A publicação na Vercel ainda precisa ser validada (ver próximos passos).
+
+## Chatbot no site
+
+O botão verde (`data-chatbot-toggle`) abre o assistente, implementado em `assets/js/chatbot.js`. Ele chama `/api/chat` no mesmo domínio. Para testar o front com um servidor em outra porta, defina `window.EDUCANDO_API_URL` antes do script e libere a origem em `ALLOWED_ORIGINS`.
+
+O botão deixou de ser "voltar ao topo". O aparecimento após rolar a página continua igual.
+
+## Próximos passos
+
+- Avaliar a busca na web apenas em uma fase futura.

@@ -24,7 +24,7 @@ window.NOTICIAS = [
     resumo: "A atualização está prevista para terça-feira (13) e amplia o banco de questões do app gratuito na reta final de preparação para as provas.",
     fonte: "Agência Brasil",
     link: "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/aplicativo-de-simulados-do-enem-tera-mais-questoes-na-reta-final",
-    imagem: "./assets/images/blog-1.jpg"
+    imagem: "./assets/images/noticias/blog-1.jpg"
   },
 
   {
@@ -34,7 +34,7 @@ window.NOTICIAS = [
     resumo: "Quem teve inscrição automática, como concluintes da rede pública, precisa definir o idioma da prova de língua estrangeira até o dia 18.",
     fonte: "BR104",
     link: "https://www.br104.com.br/variedades/servicos/enem-2026-escolha-lingua-estrangeira-prazo-18-outubro",
-    imagem: "./assets/images/blog-2.jpg"
+    imagem: "./assets/images/noticias/blog-2.jpg"
   },
 
   {
@@ -44,7 +44,7 @@ window.NOTICIAS = [
     resumo: "A iniciativa reúne mais de 1,5 mil cursinhos em todo o país e oferece preparação gratuita para estudantes de baixa renda.",
     fonte: "Imagem da Ilha (Governo Federal)",
     link: "https://www.imagemdailha.com.br/blog/rede-do-mec-amplia-preparacao-gratuita-para-o-enem-2026.html",
-    imagem: "./assets/images/blog-3.jpg"
+    imagem: "./assets/images/noticias/blog-3.jpg"
   },
 
   {
@@ -54,7 +54,7 @@ window.NOTICIAS = [
     resumo: "O MEC reforça a preparação gratuita com simulados e correção de redação por inteligência artificial no aplicativo oficial.",
     fonte: "Radar DF",
     link: "https://radardf.com.br/distrito-federal/economia-df/mec-reforca-aplicativo-de-simulados-com-novas-questoes-para-o-enem",
-    imagem: "./assets/images/blog-1.jpg"
+    imagem: "./assets/images/noticias/blog-1.jpg"
   },
 
   {
@@ -64,7 +64,7 @@ window.NOTICIAS = [
     resumo: "O evento no campus Pirituba do IFSP reuniu estudantes para uma revisão de conteúdos e orientações sobre a prova.",
     fonte: "Quero Bolsa",
     link: "https://querobolsa.com.br/enem",
-    imagem: "./assets/images/blog-2.jpg"
+    imagem: "./assets/images/noticias/blog-2.jpg"
   }
 
 ];

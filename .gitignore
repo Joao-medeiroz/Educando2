@@ -1,0 +1,9 @@
+# segredos: nunca versionar
+.env
+backend/.env
+
+# ambiente e caches Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/

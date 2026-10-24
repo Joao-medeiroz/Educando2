@@ -2496,3 +2496,202 @@ textarea.input { resize: vertical; min-height: 140px; }
 }
 
 .page-hero .hero-text { text-align: center; }
+
+
+/*-----------------------------------*\
+  #CHATBOT
+\*-----------------------------------*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.chatbot {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: min(360px, calc(100vw - 30px));
+  height: min(540px, 70vh);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow-3);
+  overflow: hidden;
+  z-index: 4;
+}
+
+.chatbot[hidden] {
+  display: none;
+}
+
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--gradient);
+  color: var(--white);
+}
+
+.chatbot-title {
+  font-family: var(--ff-league_spartan);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+}
+
+.chatbot-close {
+  color: var(--white);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.chatbot-log {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  overflow-y: auto;
+  background-color: var(--isabelline);
+}
+
+.chat-bot,
+.chat-user {
+  max-width: 85%;
+  padding: 10px 12px;
+  border-radius: var(--radius-10);
+  font-family: var(--ff-poppins);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.chat-bot {
+  align-self: flex-start;
+  background-color: var(--white);
+  box-shadow: var(--shadow-1);
+}
+
+.chat-user {
+  align-self: flex-end;
+  background-color: var(--kappel);
+  color: var(--white);
+}
+
+.chat-typing {
+  opacity: 0.6;
+}
+
+.chat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 14px 0;
+  background-color: var(--isabelline);
+}
+
+.chat-chips button {
+  padding: 5px 11px;
+  border: 1px solid var(--kappel);
+  border-radius: var(--radius-pill);
+  background-color: var(--white);
+  color: var(--kappel);
+  font-family: var(--ff-poppins);
+  font-size: 1.2rem;
+}
+
+.chat-card {
+  background-color: var(--white);
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+
+.chat-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+}
+
+.chat-card-body {
+  padding: 10px 12px 12px;
+}
+
+.chat-card-tipo {
+  font-family: var(--ff-poppins);
+  font-size: 1.1rem;
+  color: var(--gray-web);
+}
+
+.chat-card-titulo {
+  font-family: var(--ff-league_spartan);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  margin: 2px 0 4px;
+}
+
+.chat-card-descricao {
+  font-family: var(--ff-poppins);
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--eerie-black-1);
+}
+
+.chat-card-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--ff-poppins);
+  font-size: 1.3rem;
+  font-weight: var(--fw-500);
+  color: var(--kappel);
+  text-decoration: underline;
+}
+
+.chatbot-form {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--platinum);
+  background-color: var(--white);
+}
+
+.chatbot-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 1px solid var(--platinum);
+  border-radius: var(--radius-pill);
+  font-family: var(--ff-poppins);
+  font-size: 1.4rem;
+}
+
+.chatbot-form input:focus {
+  outline: 2px solid var(--kappel);
+  outline-offset: 1px;
+}
+
+.chatbot-send {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-circle);
+  background-color: var(--kappel);
+  color: var(--white);
+  font-size: 18px;
+}
+
+.chatbot-send:disabled {
+  opacity: 0.5;
+}
+
+@media (max-width: 575px) {
+  .chatbot {
+    right: 15px;
+    bottom: 90px;
+  }
+}
