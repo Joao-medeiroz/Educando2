@@ -1,6 +1,8 @@
 """Endpoint do chatbot. Coordena: validação -> regras -> IA (se necessário) -> busca -> resposta."""
 import time
 from collections import defaultdict, deque
+from .config import GEMINI_MODEL
+from .gemini_client import _obter_cliente
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -80,3 +82,10 @@ def chat(corpo: ChatRequest, request: Request):
         origem=origem,
         categoria=info["categoria"],
     )
+@app.get("/api/diagnostico-gemini")
+def diagnostico_gemini():
+        try:
+            _obter_cliente().models.generate_content(model=GEMINI_MODEL, contents="ok")
+            return {"ok": True, "modelo": GEMINI_MODEL}
+        except Exception as erro:
+            return {"ok": False, "erro": type(erro).__name__, "detalhe": str(erro)[:200]}    
