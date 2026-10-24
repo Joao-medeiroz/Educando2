@@ -82,10 +82,3 @@ def chat(corpo: ChatRequest, request: Request):
         origem=origem,
         categoria=info["categoria"],
     )
-@app.get("/api/diagnostico-gemini")
-def diagnostico_gemini():
-    try:
-        resultado = interpretar_com_ia("estou procurando oportunidades na área da saúde")
-        return {"ok": True, "resultado": resultado}
-    except IAIndisponivel as erro:
-        return {"ok": False, "erro": str(erro)} 
