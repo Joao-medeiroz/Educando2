@@ -16,3 +16,9 @@ ALLOWED_ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "").split(","
 MAX_MENSAGEM_CHARS = 500
 MAX_OPORTUNIDADES = 4
 RATE_LIMIT_POR_MINUTO = int(os.getenv("RATE_LIMIT_POR_MINUTO", "10"))
+
+RECURSOS_PATH = BASE_DIR / "data" / "recursos_oficiais.json"
+
+GUIAS_PATH = BASE_DIR / "data" / "guias.json"
+# Teto de chamadas ao Gemini por dia (o limite gratuito do modelo é 500). Folga para testes e picos.
+LIMITE_DIARIO_IA = int(os.getenv("LIMITE_DIARIO_IA", "200"))

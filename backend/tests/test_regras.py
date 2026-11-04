@@ -6,15 +6,12 @@ def test_saudacao_sem_ia():
     assert rules.interpretar("oi, tudo bem?")["intencao"] == "saudacao"
 
 
-def test_busca_simples_identifica_categoria():
-    info = rules.interpretar("Quero ver estágios de tecnologia")
-    assert info["intencao"] == "busca"
-    assert info["categoria"] == "emprego"
+def test_saudacao_se_apresenta_como_edu():
+    assert "Edu" in rules.TEXTO_SAUDACAO
 
 
-def test_mensagem_sem_termos_conhecidos_vai_para_ia():
-    assert rules.interpretar("Sou estudante e gosto de programar")["intencao"] == "desconhecida"
-
-
-def test_acentos_nao_atrapalham():
-    assert rules.interpretar("intercâmbio na Europa")["categoria"] == "intercambio"
+def test_outras_mensagens_vao_para_a_ia_que_decide_a_intencao():
+    # Antes as regras já mostravam oportunidades por palavra solta ("curso", "estágio").
+    # Agora só a saudação é local; a IA decide se é pedido, conversa, direcionamento ou tutorial.
+    for mensagem in ["quero um estágio", "curso", "cursos de idiomas", "como me inscrevo no enem?"]:
+        assert rules.interpretar(mensagem)["intencao"] == "desconhecida"

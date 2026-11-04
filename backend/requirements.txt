@@ -1,5 +1,0 @@
-# Dependências de produção (usadas pelo código em backend/app)
-fastapi==0.117.1
-pydantic>=2.0
-uvicorn>=0.30
-google-genai>=1.0

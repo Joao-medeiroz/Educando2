@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "frontend",
   "functions": {
     "api/index.py": {
       "includeFiles": "backend/data/**"

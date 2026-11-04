@@ -1,7 +1,7 @@
 /**
- * Gera backend/data/oportunidades.json a partir de assets/js/dados-oportunidades.js.
+ * Gera backend/data/oportunidades.json a partir de frontend/assets/js/dados-oportunidades.js.
  *
- * Fonte da verdade: assets/js/dados-oportunidades.js (edite só este arquivo).
+ * Fonte da verdade: frontend/assets/js/dados-oportunidades.js (edite só este arquivo).
  * Uso (na raiz do projeto):
  *   node backend/scripts/exportar_oportunidades.js           -> gera o JSON
  *   node backend/scripts/exportar_oportunidades.js --verificar -> falha se o JSON estiver desatualizado
@@ -10,7 +10,7 @@ const fs = require("fs");
 const path = require("path");
 
 const raiz = path.join(__dirname, "..", "..");
-const origem = path.join(raiz, "assets", "js", "dados-oportunidades.js");
+const origem = path.join(raiz, "frontend", "assets", "js", "dados-oportunidades.js");
 const destino = path.join(raiz, "backend", "data", "oportunidades.json");
 
 const codigo = fs.readFileSync(origem, "utf8");
