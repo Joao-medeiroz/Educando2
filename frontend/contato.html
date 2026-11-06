@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contato - Educando</title>
+  <meta name="title" content="Contato - Educando">
+  <meta
+    name="description"
+    content="Fale com o Educando: tire dúvidas, sugira oportunidades ou proponha parcerias."
+  >
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="preload" as="image" href="./assets/images/home/hero-bg.svg">
+</head>
+
+<body id="top">
+
+  <!-- HEADER -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="./index.html" class="logo">
+        <img
+          src="./assets/images/logo/logo.svg"
+          width="173"
+          height="50"
+          alt="Logo Educando"
+        >
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="./index.html" class="logo">
+            <img
+              src="./assets/images/logo/logo.svg"
+              width="173"
+              height="50"
+              alt="Logo Educando"
+            >
+          </a>
+
+          <button
+            class="nav-close-btn"
+            aria-label="Fechar menu"
+            data-nav-toggler
+          >
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>
+              Home
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./sobre.html" class="navbar-link" data-nav-link>
+              Sobre
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./oportunidades.html" class="navbar-link" data-nav-link>
+              Oportunidades
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a
+              href="./contato.html"
+              class="navbar-link active"
+              aria-current="page"
+              data-nav-link
+            >
+              Contato
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <button
+          class="header-action-btn"
+          aria-label="Pesquisar"
+          title="Pesquisar"
+          data-search-btn
+        >
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button
+          class="header-action-btn"
+          aria-label="Abrir menu"
+          data-nav-toggler
+        >
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- PAGE HERO -->
+
+      <section
+        class="page-hero has-bg-image"
+        aria-label="Contato"
+        style="background-image: url('./assets/images/home/hero-bg.svg')"
+      >
+        <div class="container">
+
+          <p class="breadcrumb">
+            <a href="./index.html" class="breadcrumb-link">Home</a>
+
+            <ion-icon
+              name="chevron-forward-outline"
+              aria-hidden="true"
+            ></ion-icon>
+
+            <span class="span">Contato</span>
+          </p>
+
+          <h1 class="h1 section-title">
+            Fale com <span class="span">a gente</span>
+          </h1>
+
+          <p class="hero-text">
+            Tem dúvidas, quer sugerir uma oportunidade ou propor uma parceria?
+            Envie sua mensagem.
+          </p>
+
+        </div>
+      </section>
+
+      <!-- FORMULÁRIO DE CONTATO -->
+
+      <section class="section contact" aria-label="Formulário de contato">
+        <div class="container">
+
+          <div class="contact-info">
+
+            <p class="section-subtitle">Contato</p>
+
+            <h2 class="h2 section-title">Vamos conversar?</h2>
+
+            <p class="section-text">
+              Preencha o formulário e nossa equipe responde o mais rápido
+              possível.
+            </p>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <ion-icon
+                  name="checkmark-done-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+
+                <span class="span">
+                  Tire dúvidas sobre as oportunidades
+                </span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon
+                  name="checkmark-done-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+
+                <span class="span">
+                  Sugira um curso, vaga ou programa
+                </span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon
+                  name="checkmark-done-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+
+                <span class="span">
+                  Proponha parcerias com o Educando
+                </span>
+              </li>
+
+            </ul>
+          </div>
+
+          <!--
+            Envio de mensagens pelo Web3Forms.
+            A chave de acesso foi fornecida pelo proprietário do projeto.
+          -->
+
+          <form
+            class="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            novalidate
+            data-contact-form
+          >
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="8deb2004-0c8c-4f3f-a81c-f94342f4ee32"
+            >
+
+            <input
+              type="hidden"
+              name="subject"
+              value="Nova mensagem de contato - Educando"
+            >
+
+            <input
+              type="hidden"
+              name="from_name"
+              value="Site Educando"
+            >
+
+            <div class="field">
+              <label for="nome" class="label">Nome</label>
+
+              <input
+                type="text"
+                id="nome"
+                name="name"
+                class="input"
+                placeholder="Seu nome completo"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="email" class="label">E-mail</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="input"
+                placeholder="voce@exemplo.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="telefone" class="label">
+                Telefone <span class="optional">(opcional)</span>
+              </label>
+
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                class="input"
+                placeholder="(11) 91234-5678"
+                autocomplete="tel"
+              >
+            </div>
+
+            <div class="field">
+              <label for="mensagem" class="label">Mensagem</label>
+
+              <textarea
+                id="mensagem"
+                name="message"
+                class="input"
+                rows="6"
+                placeholder="Escreva sua mensagem..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- Campo honeypot contra robôs -->
+
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hp"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            >
+
+            <button type="submit" class="btn has-before">
+              <span class="span">Enviar mensagem</span>
+
+              <ion-icon
+                name="arrow-forward-outline"
+                aria-hidden="true"
+              ></ion-icon>
+            </button>
+
+            <p
+              class="form-status"
+              role="status"
+              aria-live="polite"
+              data-form-status
+            ></p>
+
+          </form>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer
+    class="footer"
+    style="background-image: url('./assets/images/home/footer-bg.png')"
+  >
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+
+          <a href="./index.html" class="logo">
+            <img
+              src="./assets/images/logo/logo-light.svg"
+              width="173"
+              height="50"
+              alt="Logo Educando"
+            >
+          </a>
+
+          <p class="footer-brand-text">
+            Conectamos estudantes e jovens a cursos, estágios, empregos e
+            oportunidades de desenvolvimento profissional.
+          </p>
+
+          <div class="wrapper">
+            <span class="span">Add:</span>
+
+            <address class="address">
+              Rua Alexandre Dumas, 2016 - Santo Amaro,
+            </address>
+
+            <br>
+
+            <address class="address">
+              São Paulo - SP, 04717-004
+            </address>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Email:</span>
+
+            <a
+              href="mailto:educandooti@gmail.com"
+              class="footer-link"
+            >
+              educandooti@gmail.com
+            </a>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+  <li><p class="footer-list-title">Plataformas online</p></li>
+  <li><a href="./sobre.html" class="footer-link">Sobre</a></li>
+  <li><a href="./oportunidades.html" class="footer-link">Cursos</a></li>
+  <li><a href="./oportunidades.html" class="footer-link">Oportunidades</a></li>
+</ul>
+
+        <ul class="footer-list">
+  <li><p class="footer-list-title">Links</p></li>
+  <li><a href="./index.html#oportunidades-em-destaque" class="footer-link">Notícias e Artigos</a></li>
+  <li><a href="./index.html#noticias" class="footer-link">Notícias do dia</a></li>
+  <li><a href="./index.html" class="footer-link">Home</a></li>
+</ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          Copyright 2026 All Rights Reserved by
+          <a href="./index.html" class="copyright-link">Educando</a>
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- VOLTAR AO TOPO -->
+
+  <a
+    href="#"
+    class="back-top-btn"
+    aria-label="Abrir assistente de oportunidades"
+    aria-controls="chatbot"
+    aria-expanded="false"
+    data-back-top-btn
+    data-chatbot-toggle
+  >
+    <ion-icon name="chatbubble-ellipses-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- JAVASCRIPT -->
+
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/contato.js" defer></script>
+
+  <!-- IONICONS -->
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+
+  <script src="./assets/js/chatbot.js" defer></script>
+</body>
+</html>
