@@ -20,23 +20,23 @@
    * colors
    */
 
-  --selective-yellow: hsl(42, 94%, 55%);
-  --eerie-black-1: hsl(0, 0%, 9%);
-  --eerie-black-2: hsl(180, 3%, 7%);
-  --quick-silver: hsl(0, 0%, 65%);
-  --radical-red: hsl(351, 83%, 61%);
-  --light-gray: hsl(0, 0%, 80%);
-  --isabelline: hsl(36, 33%, 94%);
-  --gray-x-11: hsl(0, 0%, 73%);
-  --kappel_15: hsla(170, 75%, 41%, 0.15);
-  --platinum: hsl(0, 0%, 90%);
-  --gray-web: hsl(0, 0%, 50%);
-  --black_80: hsla(0, 0%, 0%, 0.8);
-  --white_50: hsla(0, 0%, 100%, 0.5);
-  --black_50: hsla(0, 0%, 0%, 0.5);
-  --black_30: hsla(0, 0%, 0%, 0.3);
-  --kappel: hsl(170, 75%, 41%);
-  --white: hsl(0, 0%, 100%);
+  --selective-yellow: #28ea76;
+--eerie-black-1: #1b1d4d;
+--eerie-black-2: #15173d;
+--quick-silver: #9295ad;
+--radical-red: #ff58ad;
+--light-gray: #e8e9f5;
+--isabelline: #f0f1ff;
+--gray-x-11: #c5c7d9;
+--kappel_15: rgba(101, 119, 255, 0.15);
+--platinum: #e3e5f5;
+--gray-web: #747895;
+--black_80: rgba(27, 29, 77, 0.8);
+--white_50: rgba(255, 255, 255, 0.5);
+--black_50: rgba(27, 29, 77, 0.5);
+--black_30: rgba(27, 29, 77, 0.3);
+--kappel: #6577ff;
+--white: #ffffff;
 
   /**
    * gradient color
