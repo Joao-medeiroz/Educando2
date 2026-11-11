@@ -10,6 +10,7 @@ Usa a chamada de funções nativa do Gemini (dentro da cota gratuita). Cada ferr
 fontes que usou, e só esses endereços podem aparecer na resposta.
 """
 import contextvars
+import datetime
 import json
 
 from google.genai import types
@@ -30,6 +31,12 @@ INSTRUCOES_AGENTE = (
     "Como trabalhar:\n"
     "- Para oportunidades, consulte primeiro a base (consultar_base). Se a base não tiver, pesquise na web "
     "(pesquisar_na_web). Para passo a passo de Enem, Sisu, ProUni, estágio ou inscrição, use consultar_guia.\n"
+    "- Quando a pessoa pedir estágio, vaga júnior, pleno, sênior ou trainee, use buscar_vagas_abertas e liste as "
+    "vagas e processos abertos que encontrar: empresa, cargo, cidade ou modalidade e o prazo que aparecer no trecho. "
+    "Se nada aberto aparecer, diga isso com clareza.\n"
+    "- Ao falar de processos (Enem, vestibular, estágio, bolsas), inclua as datas e a localidade (cidade, estado ou online) "
+    "sempre que as fontes trouxerem essas informações.\n"
+    "- Em passos a passo, diga onde fazer cada etapa (site ou local) e, quando houver, onde ocorre a prova ou o atendimento.\n"
     "- Quando a pessoa disser algo sobre si (área, situação, objetivo, nome, cidade), registre com atualizar_perfil.\n"
     "- Se a pessoa pedir uma indicação, responda já com opções concretas. Faça no máximo uma pergunta, e só se for "
     "realmente necessária.\n"
@@ -115,6 +122,17 @@ def _acumular_perfil(novo):
     atual.update(novo)
 
 
+def buscar_vagas_abertas(area: str, nivel: str) -> str:
+    """Procura vagas e processos seletivos abertos agora numa área (estágio, júnior, pleno, sênior ou trainee).
+
+    Args:
+        area: a área de atuação (ex.: 'marketing', 'dados', 'saúde').
+        nivel: o nível da vaga (ex.: 'estágio', 'júnior', 'pleno', 'sênior', 'trainee').
+    """
+    ano = datetime.date.today().year
+    return pesquisar_na_web(f"vagas {nivel} {area} inscrições abertas {ano} Brasil")
+
+
 def responder(mensagem: str, historico: list, perfil: dict) -> dict:
     """Roda o agente para uma mensagem. Devolve texto, fontes, oportunidades e o que se aprendeu do perfil."""
     _fontes.set([])
@@ -135,7 +153,7 @@ def responder(mensagem: str, historico: list, perfil: dict) -> dict:
         raise IAEsgotada("LIMITE_DIARIO")
     configuracao = types.GenerateContentConfig(
         system_instruction=instrucoes,
-        tools=[consultar_base, pesquisar_na_web, consultar_guia, atualizar_perfil],
+        tools=[consultar_base, pesquisar_na_web, buscar_vagas_abertas, consultar_guia, atualizar_perfil],
         automatic_function_calling=types.AutomaticFunctionCallingConfig(maximum_remote_calls=8),
         max_output_tokens=2048,
         temperature=0.4,

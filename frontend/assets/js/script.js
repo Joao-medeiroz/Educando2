@@ -73,11 +73,18 @@ const newsTrack = document.querySelector("[data-news-track]");
 const newsPrev = document.querySelector("[data-news-prev]");
 const newsNext = document.querySelector("[data-news-next]");
 
-const escapeHtml = function (text) {
-  const div = document.createElement("div");
-  div.textContent = text;
-  return div.innerHTML;
-}
+  const escapeHtml = function (text) {
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  const safeUrl = function (url) {
+    return /^https:\/\//.test(String(url)) ? url : "#";
+  }
 
 const formatNewsDate = function (isoDate) {
   const date = new Date(isoDate + "T12:00:00");
@@ -101,7 +108,7 @@ const renderNews = function () {
             <span class="badge">${escapeHtml(item.categoria)}</span>
 
             <h3 class="h3">
-              <a href="${escapeHtml(item.link)}" class="card-title" target="_blank" rel="noopener">${escapeHtml(item.titulo)}</a>
+              <a href="${escapeHtml(safeUrl(item.link))}" class="card-title" target="_blank" rel="noopener">${escapeHtml(item.titulo)}</a>
             </h3>
 
             <ul class="card-meta-list">

@@ -18,9 +18,16 @@
   if (!data || !root) return;
 
   const escapeText = function (text) {
-    const div = document.createElement("div");
-    div.textContent = text;
-    return div.innerHTML;
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  const safeUrl = function (url) {
+    return /^https:\/\//.test(String(url)) ? url : "#";
   }
 
   const normalize = function (text) {
@@ -51,7 +58,7 @@
               <span class="badge">${escapeText(item.tipo)}</span>
 
               <h3 class="h3">
-                <a href="${escapeText(item.link)}" class="card-title" target="_blank" rel="noopener">${escapeText(item.titulo)}</a>
+                <a href="${escapeText(safeUrl(item.link))}" class="card-title" target="_blank" rel="noopener">${escapeText(item.titulo)}</a>
               </h3>
 
               <p class="card-text">${escapeText(item.descricao)}</p>

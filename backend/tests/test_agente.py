@@ -73,3 +73,15 @@ def test_cota_esgotada_no_agente_desliga_o_chat(monkeypatch):
     from fastapi.testclient import TestClient
     resposta = TestClient(main.app).post("/api/chat", json={"mensagem": "quero ajuda"}).json()
     assert resposta["chat_indisponivel"] is True
+
+
+
+def test_buscar_vagas_abertas_usa_a_pesquisa_e_registra_as_fontes(monkeypatch):
+    chamadas = []
+    monkeypatch.setattr(agente.pesquisa_web, "disponivel", lambda: True)
+    monkeypatch.setattr(agente.pesquisa_web, "pesquisar", lambda c: chamadas.append(c) or [
+        {"titulo": "Vaga júnior de marketing", "link": "https://www.vagas.com.br/vaga-1", "trecho": "Inscrições até 30/11."}])
+    saida = agente.buscar_vagas_abertas("marketing", "júnior")
+    assert "marketing" in chamadas[0] and "júnior" in chamadas[0]
+    assert "Inscrições até 30/11" in saida
+    assert {f["link"] for f in agente._fontes.get()} == {"https://www.vagas.com.br/vaga-1"}
