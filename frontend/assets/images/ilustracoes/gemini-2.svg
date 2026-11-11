@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90" width="100%" height="100%">
+  <defs>
+    <!-- Sombra suave para o card horizontal -->
+    <filter id="shadow-h" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <style>
+    .stat-number {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      fill: #e63946;
+    }
+    .stat-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      fill: #555555;
+    }
+  </style>
+
+  <!-- Fundo do Card com o canto inferior esquerdo chanfrado (estilo original invertido/horizontal) -->
+  <path d="M 24 0 
+           H 196 
+           A 24 24 0 0 1 220 24 
+           V 66 
+           A 24 24 0 0 1 196 90 
+           H 40 
+           Q 20 90 14 74
+           Q 12 66 12 56
+           V 24 
+           A 24 24 0 0 1 36 0 Z" 
+        fill="#ffffff" 
+        filter="url(#shadow-h)"/>
+
+  <!-- Ícone Circular de Usuário (Cor de fundo rosa claro e ícone vermelho) -->
+  <g transform="translate(48, 45)">
+    <circle cx="0" cy="0" r="24" fill="#fdf0f2"/>
+    <!-- Ícone de usuário com sinal de mais estilizado -->
+    <g transform="translate(-10, -11) scale(0.85)" stroke="#e63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+      <circle cx="10" cy="7" r="4"/>
+      <path d="M19 8v6M22 11h-6"/>
+    </g>
+  </g>
+
+  <!-- Textos -->
+  <text x="88" y="39" class="stat-number">100+</text>
+  <text x="88" y="58" class="stat-label">Colaboradores &amp;</text>
+  <text x="88" y="72" class="stat-label">Apoiadores</text>
+</svg>

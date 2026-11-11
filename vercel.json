@@ -1,0 +1,15 @@
+{
+  "outputDirectory": "frontend",
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "backend/data/**",
+      "maxDuration": 300
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index"
+    }
+  ]
+}
