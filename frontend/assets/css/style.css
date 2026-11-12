@@ -2954,3 +2954,12 @@ textarea.input { resize: vertical; min-height: 140px; }
   .opp-section .opp-grid,
   .opp-section.opp-solo .opp-grid { grid-auto-columns: 86%; }
 }
+
+
+/* formatação das respostas do Edu */
+.chatbot .chat-paragrafo strong,
+.chatbot .chat-lista strong { font-weight: 600; color: var(--eerie-black-1); }
+.chatbot .chat-paragrafo em,
+.chatbot .chat-lista em { font-style: italic; }
+.chatbot .chat-paragrafo u,
+.chatbot .chat-lista u { text-decoration: underline; text-underline-offset: 3px; }

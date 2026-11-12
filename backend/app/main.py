@@ -71,12 +71,25 @@ _perfil_atual = ContextVar("perfil_atual", default=None)
 _perfil_extraido = ContextVar("perfil_extraido", default=None)
 
 
-URL_RE = re.compile(r"https://[^\s)\]]+")
+URL_RE = re.compile(r"(?:https?://|www\.)[^\s)\]\"']+")
+
+
+def _chave_url(url) -> str:
+    """Compara endereços sem esquema, sem www. e sem barra final."""
+    limpo = re.sub(r"^https?://", "", str(url).strip().lower())
+    limpo = re.sub(r"^www\.", "", limpo)
+    return limpo.rstrip("/")
 
 
 def _filtrar_urls(texto, permitidos):
-    """Só mantém endereços que vieram dos dados; qualquer outro é removido."""
-    return URL_RE.sub(lambda m: m.group(0) if m.group(0) in permitidos else "", texto)
+    """Só mantém endereços que vieram dos dados; qualquer outro é removido.
+
+    Links em markdown, [texto](endereço), são reduzidos ao texto quando o endereço não é permitido.
+    """
+    chaves = {_chave_url(p) for p in permitidos}
+    markdown = re.compile(r"\[([^\]]+)\]\(\s*([^)\s]+)\s*\)")
+    texto = markdown.sub(lambda m: m.group(0) if _chave_url(m.group(2)) in chaves else m.group(1), texto)
+    return URL_RE.sub(lambda m: m.group(0) if _chave_url(m.group(0)) in chaves else "", texto)
 
 
 def _links_permitidos(itens, online, referencias, guia) -> set:

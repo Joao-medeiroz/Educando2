@@ -86,21 +86,55 @@
 
   function rolarParaFim() { log.scrollTop = log.scrollHeight; }
 
-  // Escreve o texto e transforma endereços https em links (textContent para o texto comum).
+  // Escreve o texto com formatação simples: **negrito**, *itálico*, __sublinhado__ e links.
+  // Tudo é montado com elementos e textContent, nunca com innerHTML.
+  const PADRAO_FORMATO = /\[([^\]]+)\]\(\s*((?:https?:\/\/|www\.)[^)\s]+)\s*\)|((?:https?:\/\/|www\.)[^\s)<>"']+)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\n]+)\*/g;
+
+  function criarLink(texto, url) {
+    const endereco = /^www\./.test(url) ? 'https://' + url : url;
+    if (!LINK_VALIDO.test(endereco)) return document.createTextNode(texto);
+    const link = document.createElement('a');
+    link.href = endereco;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = texto;
+    return link;
+  }
+
   function anexarTextoComLinks(elemento, texto) {
-    String(texto).split(/(https:\/\/[^\s)]+)/).forEach(function (parte) {
-      if (!parte) return;
-      if (LINK_VALIDO.test(parte)) {
-        const link = document.createElement('a');
-        link.href = parte;
-        link.target = '_blank';
-        link.rel = 'noopener';
-        link.textContent = parte.replace(/^https:\/\//, '').replace(/\/$/, '');
-        elemento.appendChild(link);
-      } else {
-        elemento.appendChild(document.createTextNode(parte));
+    const original = String(texto);
+    let ultimo = 0;
+    let encontrou;
+    PADRAO_FORMATO.lastIndex = 0;
+    while ((encontrou = PADRAO_FORMATO.exec(original)) !== null) {
+      if (encontrou.index > ultimo) {
+        elemento.appendChild(document.createTextNode(original.slice(ultimo, encontrou.index)));
       }
-    });
+      if (encontrou[1] !== undefined) {
+        elemento.appendChild(criarLink(encontrou[1], encontrou[2]));
+      } else if (encontrou[3] !== undefined) {
+        const url = encontrou[3].replace(/[.,;:!?]+$/, '');
+        elemento.appendChild(criarLink(url.replace(/^https?:\/\//, '').replace(/\/$/, ''), url));
+        ultimo = encontrou.index + url.length;
+        continue;
+      } else if (encontrou[4] !== undefined) {
+        const forte = document.createElement('strong');
+        forte.textContent = encontrou[4];
+        elemento.appendChild(forte);
+      } else if (encontrou[5] !== undefined) {
+        const sublinhado = document.createElement('u');
+        sublinhado.textContent = encontrou[5];
+        elemento.appendChild(sublinhado);
+      } else if (encontrou[6] !== undefined) {
+        const enfase = document.createElement('em');
+        enfase.textContent = encontrou[6];
+        elemento.appendChild(enfase);
+      }
+      ultimo = PADRAO_FORMATO.lastIndex;
+    }
+    if (ultimo < original.length) {
+      elemento.appendChild(document.createTextNode(original.slice(ultimo)));
+    }
   }
 
   function desenharTexto(entrada) {

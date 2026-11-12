@@ -382,3 +382,12 @@ def test_links_inventados_saem_do_texto():
     texto = "Acesse https://www.gov.br/inep/pt-br ou https://site-inventado.example para mais."
     limpo = _filtrar_urls(texto, {"https://www.gov.br/inep/pt-br"})
     assert "gov.br/inep" in limpo and "site-inventado" not in limpo
+
+
+
+def test_links_de_www_e_markdown_sao_filtrados():
+    from app.main import _filtrar_urls
+    texto = ("Veja [o site da FUVEST](https://www.fuvest.br/) e [outro](https://inventado.example), "
+             "ou www.inventado.example.")
+    limpo = _filtrar_urls(texto, {"https://www.fuvest.br"})
+    assert "https://www.fuvest.br/" in limpo and "inventado" not in limpo

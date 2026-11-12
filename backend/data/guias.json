@@ -2,51 +2,501 @@
   "_comentario": "Guias curtos e revisados, usados pelo Edu para responder tutoriais (como fazer, documentos, prazos). Escreva de forma factual e sem datas fixas: os prazos mudam a cada edital. 'fontes' são sempre links oficiais. Não precisa rodar nenhum script.",
   "guias": [
     {
-      "id": "enem-inscricao",
-      "titulo": "Como se inscrever no Enem",
-      "tags": ["enem", "inscricao", "inscrever", "prova", "documento", "documentos", "prazo", "prazos", "isencao", "taxa"],
-      "texto": "A inscrição no Enem é feita pela internet, no site do Inep, com a sua conta gov.br. O período de inscrição, as datas da prova e as regras mudam a cada ano e estão no edital oficial publicado pelo Inep, no início do processo. Passos gerais: 1) crie ou acesse sua conta gov.br; 2) entre no sistema de inscrição do Enem pelo portal do Inep; 3) confira seus dados pessoais e de contato; 4) escolha a cidade de prova, quando o sistema pedir; 5) se tiver direito à isenção da taxa, peça no período indicado no edital; 6) confirme a inscrição e guarde o comprovante. Documentos: para fazer a prova, é preciso levar documento de identidade com foto aceito pelo edital, como RG, CNH ou carteira de trabalho. Você precisa do CPF no cadastro. Se precisar de atendimento especial, como tempo extra ou prova ampliada, peça no formulário de inscrição dentro do prazo e envie os documentos pedidos no edital. Isenção: candidatos de baixa renda inscritos no Cadastro Único e estudantes de escola pública costumam ter direito à isenção, mas as regras exatas estão no edital do ano. Dica: não deixe para a última hora, porque o site pode ficar lento perto do fim do prazo.",
-      "fontes": [
-        {"titulo": "Portal do Inep (Enem)", "link": "https://www.gov.br/inep/pt-br"}
-      ]
-    },
-    {
       "id": "sisu-prouni",
       "titulo": "Como usar o Sisu e o ProUni",
-      "tags": ["sisu", "prouni", "universidade", "faculdade", "bolsa", "bolsas", "vaga", "vagas", "publica", "privada", "nota", "enem"],
+      "tags": [
+        "sisu",
+        "prouni",
+        "universidade",
+        "faculdade",
+        "bolsa",
+        "bolsas",
+        "vaga",
+        "vagas",
+        "publica",
+        "privada",
+        "nota",
+        "enem"
+      ],
       "texto": "Sisu e ProUni usam a nota do Enem para selecionar candidatos. O Sisu oferece vagas em universidades públicas, e o ProUni oferece bolsas em faculdades privadas. Sisu: a inscrição é feita no sistema do Ministério da Educação, com a conta gov.br, no período do edital. Você escolhe até duas opções de curso e instituição, em ordem de preferência. A seleção é feita pela nota do Enem, e cada instituição define a sua regra de corte. ProUni: a inscrição também é feita pelo sistema do MEC, no período do edital. Além da nota, há critérios de renda familiar por pessoa e de perfil (como ter cursado o ensino médio em escola pública ou ser pessoa com deficiência, entre outros). Uma bolsa integral ou parcial depende do critério de cada candidato. Antes de se inscrever, confira no edital as datas, as notas mínimas exigidas e os documentos que serão pedidos na comprovação. Dica: leia as regras de cada curso antes de escolher, porque a vaga pode ter critérios específicos.",
       "fontes": [
-        {"titulo": "Sisu no Acesso Único", "link": "https://acessounico.mec.gov.br/sisu"},
-        {"titulo": "ProUni no Acesso Único", "link": "https://acessounico.mec.gov.br/prouni"}
+        {
+          "titulo": "Sisu no Acesso Único",
+          "link": "https://acessounico.mec.gov.br/sisu"
+        },
+        {
+          "titulo": "ProUni no Acesso Único",
+          "link": "https://acessounico.mec.gov.br/prouni"
+        }
       ]
     },
     {
       "id": "estagio-basico",
       "titulo": "Como começar um estágio",
-      "tags": ["estagio", "estagiar", "estagios", "estagio", "curriculo", "termo", "matricula", "universitario", "faculdade", "ciee"],
+      "tags": [
+        "estagio",
+        "estagiar",
+        "estagios",
+        "estagio",
+        "curriculo",
+        "termo",
+        "matricula",
+        "universitario",
+        "faculdade",
+        "ciee"
+      ],
       "texto": "O estágio é regulado pela Lei 11.788/2008. Para estagiar, você precisa estar matriculado e frequentando um curso regular, como ensino médio, técnico, graduação ou pós-graduação. Quem faz estágio assina um termo de compromisso com a empresa e a instituição de ensino. Esse termo define a carga horária, a bolsa e o período do estágio. No estágio não obrigatório, a bolsa e o auxílio-transporte são obrigatórios. A carga horária tem limites definidos em lei e deve ser compatível com seus estudos. Passos gerais: 1) peça à escola a declaração de matrícula e de frequência; 2) monte um currículo simples, com formação, cursos e atividades; 3) cadastre-se em plataformas de estágio, como o CIEE ou o portal oficial de vagas; 4) candidate-se às vagas que combinam com o seu curso; 5) quando for chamado, a empresa e a escola assinam o termo de compromisso antes de você começar. Dica: nunca pague para se candidatar a um estágio, e desconfie de propostas que pedem dinheiro ou dados bancários antes da contratação.",
       "fontes": [
-        {"titulo": "Portal Emprega Brasil", "link": "https://empregabrasil.mte.gov.br/"},
-        {"titulo": "CIEE", "link": "https://www.ciee.org.br"}
+        {
+          "titulo": "Portal Emprega Brasil",
+          "link": "https://empregabrasil.mte.gov.br/"
+        },
+        {
+          "titulo": "CIEE",
+          "link": "https://www.ciee.org.br"
+        }
       ]
     },
     {
       "id": "jovem-aprendiz",
       "titulo": "Jovem Aprendiz: requisitos e como participar",
-      "tags": ["aprendiz", "jovem", "aprendizagem", "primeiro", "emprego", "carteira", "contrato", "menor", "adolescente"],
+      "tags": [
+        "aprendiz",
+        "jovem",
+        "aprendizagem",
+        "primeiro",
+        "emprego",
+        "carteira",
+        "contrato",
+        "menor",
+        "adolescente"
+      ],
       "texto": "O programa Jovem Aprendiz é regulado pela Lei da Aprendizagem e combina trabalho com formação profissional. Em geral, participam jovens entre 14 e 24 anos, que estejam estudando ou tenham concluído o ensino fundamental ou médio. O contrato é de trabalho, com carteira assinada, e a formação profissional é obrigatória e acompanhada pela empresa e por uma instituição formadora. Empresas de médio e grande porte precisam contratar aprendizes em uma proporção de seus funcionários definida em lei. Documentos comuns: RG ou CNH, CPF, carteira de trabalho digital, comprovante de escolaridade e comprovante de matrícula. Passos gerais: 1) cadastre-se no portal oficial de vagas; 2) procure vagas de aprendiz na sua cidade; 3) leve os documentos na entrevista; 4) se for aprovado, o contrato é assinado e a formação começa. Dica: confira sempre se a vaga oferece registro em carteira e formação profissional. Vaga sem essas duas coisas não é de aprendiz.",
       "fontes": [
-        {"titulo": "Programa Jovem Aprendiz (Ministério do Trabalho)", "link": "https://www.gov.br/trabalho-e-emprego/pt"},
-        {"titulo": "Portal Emprega Brasil", "link": "https://empregabrasil.mte.gov.br/"}
+        {
+          "titulo": "Programa Jovem Aprendiz (Ministério do Trabalho)",
+          "link": "https://www.gov.br/trabalho-e-emprego/pt"
+        },
+        {
+          "titulo": "Portal Emprega Brasil",
+          "link": "https://empregabrasil.mte.gov.br/"
+        }
       ]
     },
     {
       "id": "emprega-brasil-cadastro",
       "titulo": "Como criar seu perfil no Emprega Brasil",
-      "tags": ["emprega", "brasil", "cadastro", "cadastrar", "perfil", "curriculo", "vagas", "sine", "gov", "govbr"],
+      "tags": [
+        "emprega",
+        "brasil",
+        "cadastro",
+        "cadastrar",
+        "perfil",
+        "curriculo",
+        "vagas",
+        "sine",
+        "gov",
+        "govbr"
+      ],
       "texto": "O Emprega Brasil é o portal oficial de vagas do Ministério do Trabalho. Para usar, você precisa de uma conta gov.br. Passos gerais: 1) acesse o portal pelo endereço oficial; 2) clique em entrar e escolha entrar com gov.br; 3) faça login com CPF e senha; 4) complete seu perfil profissional, com escolaridade, experiência e área de interesse; 5) use a busca de vagas e filtre pela sua cidade e pelo nível de experiência; 6) acompanhe as candidaturas no próprio portal. Dica: mantenha o perfil atualizado. O portal mostra vagas compatíveis com o que você cadastrou, então quanto mais completo o perfil, melhores as indicações. Também existe o aplicativo Sine Fácil, que permite fazer o mesmo pelo celular.",
       "fontes": [
-        {"titulo": "Portal Emprega Brasil", "link": "https://empregabrasil.mte.gov.br/"}
+        {
+          "titulo": "Portal Emprega Brasil",
+          "link": "https://empregabrasil.mte.gov.br/"
+        }
+      ]
+    },
+    {
+      "id": "enem-inscricao",
+      "titulo": "Enem: inscrição, calendário, prova e uso da nota",
+      "tags": [
+        "enem",
+        "inscricao",
+        "inscrever",
+        "prova",
+        "calendario",
+        "data",
+        "prazo",
+        "isencao",
+        "taxa"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "Enem (Inep)",
+          "link": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"
+        },
+        {
+          "titulo": "Página do Participante (Enem)",
+          "link": "https://enem.inep.gov.br/participante/"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Inscrição",
+          "tags": [
+            "inscricao",
+            "inscrever",
+            "isencao",
+            "taxa",
+            "gov",
+            "cartao",
+            "passo"
+          ],
+          "texto": "Instituição: Inep. Passo a passo: 1) acesse a Página do Participante e entre com a conta gov.br; 2) preencha os dados e escolha a língua estrangeira (inglês ou espanhol); 3) solicite a isenção, se você se enquadrar, ou pague a taxa; 4) consulte o cartão de confirmação para ver o local da prova."
+        },
+        {
+          "titulo": "Calendário 2026",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prazo",
+            "quando",
+            "dia",
+            "horario",
+            "portao",
+            "inicio"
+          ],
+          "texto": "Inscrições: 25/05 a 12/06/2026. Primeiro dia de prova: 08/11/2026. Segundo dia: 15/11/2026. Portões: 12h às 13h. Início: 13h30. Término: 19h no primeiro dia e 18h30 no segundo. O calendário de 2027 ainda não foi divulgado: confira no Inep."
+        },
+        {
+          "titulo": "Estrutura da prova",
+          "tags": [
+            "prova",
+            "questoes",
+            "estrutura",
+            "redacao",
+            "materias",
+            "linguagens",
+            "matematica",
+            "natureza",
+            "humanas"
+          ],
+          "texto": "São 180 questões objetivas: 45 de Linguagens, 45 de Ciências Humanas, 45 de Ciências da Natureza e 45 de Matemática, além de uma redação. Primeiro dia: Linguagens, Ciências Humanas e Redação. Segundo dia: Matemática e Ciências da Natureza."
+        },
+        {
+          "titulo": "Uso da nota",
+          "tags": [
+            "sisu",
+            "prouni",
+            "fies",
+            "nota",
+            "usar",
+            "faculdade",
+            "bolsa",
+            "financiamento",
+            "vestibular"
+          ],
+          "texto": "A nota do Enem dá acesso ao Sisu (vagas em universidades públicas), ao ProUni (bolsas em faculdades particulares) e ao Fies (financiamento), conforme os critérios de cada programa. Algumas instituições também aceitam o resultado em seus processos seletivos."
+        }
+      ]
+    },
+    {
+      "id": "fuvest-vestibular",
+      "titulo": "Fuvest: vestibular da USP",
+      "tags": [
+        "fuvest",
+        "usp",
+        "vestibular",
+        "inscricao",
+        "prova",
+        "calendario",
+        "data",
+        "prazo"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "Fuvest",
+          "link": "https://www.fuvest.br/"
+        },
+        {
+          "titulo": "Vestibular da USP (Fuvest)",
+          "link": "https://www.fuvest.br/vestibular-da-usp/"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Inscrição",
+          "tags": [
+            "inscricao",
+            "inscrever",
+            "isencao",
+            "taxa",
+            "conta",
+            "cadastro",
+            "passo"
+          ],
+          "texto": "Instituição: Fundação Universitária para o Vestibular (Fuvest), que seleciona para a USP. Passo a passo: 1) acesse o site da Fuvest; 2) crie ou acesse a conta do candidato; 3) escolha o curso e a carreira; 4) preencha os dados e selecione a modalidade de concorrência; 5) solicite isenção ou redução, se aplicável; 6) pague a taxa e acompanhe as publicações. Taxa: R$ 228,00."
+        },
+        {
+          "titulo": "Calendário 2027",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prazo",
+            "quando",
+            "primeira",
+            "segunda",
+            "fase",
+            "chamada"
+          ],
+          "texto": "Inscrições: 17/08 a 09/10/2026. Primeira fase: 01/11/2026. Convocados para a segunda fase: divulgação em 23/11/2026. Segunda fase: 06 e 07/12/2026. Primeira chamada: 26/01/2027."
+        },
+        {
+          "titulo": "Estrutura da prova",
+          "tags": [
+            "prova",
+            "questoes",
+            "estrutura",
+            "redacao",
+            "fase",
+            "leitura",
+            "leituras",
+            "portugues"
+          ],
+          "texto": "Primeira fase: 80 questões de múltipla escolha, a partir das 13h. Segunda fase: questões dissertativas e redação. No primeiro dia da segunda fase: 10 questões de Português e uma redação. No segundo dia: 12 questões de disciplinas específicas, conforme a carreira. Há uma lista de leituras obrigatórias, e alguns cursos exigem provas de habilidades específicas."
+        }
+      ]
+    },
+    {
+      "id": "unicamp-vestibular",
+      "titulo": "Unicamp: vestibular da Comvest",
+      "tags": [
+        "unicamp",
+        "comvest",
+        "vestibular",
+        "inscricao",
+        "prova",
+        "calendario",
+        "data",
+        "prazo"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "Comvest (Unicamp)",
+          "link": "https://www.comvest.unicamp.br/"
+        },
+        {
+          "titulo": "Vestibular 2027 (Comvest)",
+          "link": "https://www.comvest.unicamp.br/vestibular-2027/"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Inscrição",
+          "tags": [
+            "inscricao",
+            "inscrever",
+            "isencao",
+            "taxa",
+            "conta",
+            "cadastro",
+            "passo"
+          ],
+          "texto": "Instituição: Comissão Permanente para os Vestibulares (Comvest), da Unicamp. Passo a passo: 1) acesse o portal da Comvest; 2) crie ou acesse a conta do candidato; 3) escolha o curso; 4) preencha os dados pessoais; 5) selecione a modalidade de concorrência; 6) solicite isenção, se aplicável, ou pague a taxa; 7) acompanhe as convocações. Taxa: R$ 230,00."
+        },
+        {
+          "titulo": "Calendário 2027",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prazo",
+            "quando",
+            "primeira",
+            "segunda",
+            "fase",
+            "chamada"
+          ],
+          "texto": "Inscrições: 03/08 a 08/09/2026. Primeira fase: 18/10/2026. Convocados para a segunda fase: divulgação em 12/11/2026. Segunda fase: 29 e 30/11/2026. Habilidades específicas, conforme o curso: 02 a 04/12/2026. Primeira chamada: 25/01/2027."
+        },
+        {
+          "titulo": "Estrutura da prova",
+          "tags": [
+            "prova",
+            "questoes",
+            "estrutura",
+            "redacao",
+            "fase",
+            "interdisciplinar"
+          ],
+          "texto": "Primeira fase: 72 questões de múltipla escolha, com questões interdisciplinares. Segunda fase: questões dissertativas e redação, organizadas conforme a área do curso. No primeiro dia: redação e questões de Português, Literatura e outras áreas previstas no edital. No segundo dia: Matemática e questões específicas da área. Algumas graduações exigem provas de habilidades específicas."
+        }
+      ]
+    },
+    {
+      "id": "programacao-cursos-gratuitos",
+      "titulo": "Cursos gratuitos de programação",
+      "tags": [
+        "programacao",
+        "programar",
+        "python",
+        "logica",
+        "algoritmo",
+        "codigo",
+        "curso",
+        "gratuito",
+        "tecnologia",
+        "software"
+      ],
+      "status": "a_verificar",
+      "fontes": [
+        {
+          "titulo": "SENAI-SP",
+          "link": "https://www.sp.senai.br/"
+        },
+        {
+          "titulo": "Fundação Bradesco (Escola Virtual)",
+          "link": "https://www.ev.org.br/"
+        },
+        {
+          "titulo": "Escola Virtual.Gov",
+          "link": "https://www.escolavirtual.gov.br/"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Lógica de programação (SENAI)",
+          "tags": [
+            "logica",
+            "algoritmo",
+            "iniciante",
+            "senai",
+            "programacao"
+          ],
+          "texto": "SENAI: Lógica de Programação. Online, 14 horas. Conteúdo: algoritmos, raciocínio lógico e fundamentos da programação. Gratuito. Página: https://www.sp.senai.br/curso/competencia-transversal-logica-de-programacao/95088"
+        },
+        {
+          "titulo": "Python básico (Fundação Bradesco)",
+          "tags": [
+            "python",
+            "iniciante",
+            "bradesco",
+            "basico",
+            "variavel",
+            "funcao"
+          ],
+          "texto": "Fundação Bradesco: Python Básico. Online, 18 horas, nível iniciante. Conteúdo: lógica, variáveis, estruturas condicionais e funções em Python. Gratuito. Página: https://www.ev.org.br/cursos/linguagem-de-programacao-python-basico"
+        },
+        {
+          "titulo": "Lógica e Python (SENAC)",
+          "tags": [
+            "senac",
+            "presencial",
+            "python",
+            "logica",
+            "gratuidade",
+            "bolsa"
+          ],
+          "texto": "SENAC: Lógica de Programação e Python. Presencial, conforme a unidade e a turma. Conteúdo: algoritmos, lógica, estruturas condicionais e fundamentos de Python. Pode ser gratuito pelo Programa Senac de Gratuidade (PSG). Página: https://www.sp.senac.br/bolsas-de-estudo"
+        },
+        {
+          "titulo": "Aprenda Mais (MEC)",
+          "tags": [
+            "mec",
+            "aprenda",
+            "introducao",
+            "python",
+            "online",
+            "certificado"
+          ],
+          "texto": "Aprenda Mais (MEC): cursos online de introdução à programação e Python, gratuitos. Pode haver certificado, conforme os critérios de conclusão. Página: https://aprendamais.mec.gov.br/"
+        }
+      ]
+    },
+    {
+      "id": "saude-estagios-sp",
+      "titulo": "Medicina e saúde: estágios e formação em São Paulo",
+      "tags": [
+        "medicina",
+        "saude",
+        "estagio",
+        "estagios",
+        "sp",
+        "sao",
+        "paulo",
+        "enfermagem",
+        "hospital",
+        "internato",
+        "sus"
+      ],
+      "status": "a_verificar",
+      "fontes": [
+        {
+          "titulo": "Estágios SMS São Paulo",
+          "link": "https://smartsampa.prefeitura.sp.gov.br/web/saude/w/estagiosms"
+        },
+        {
+          "titulo": "Estágio Ministério da Saúde",
+          "link": "https://www.gov.br/saude/pt-br/acesso-a-informacao/estagio"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Secretaria Municipal da Saúde de SP",
+          "tags": [
+            "secretaria",
+            "municipal",
+            "prefeitura",
+            "sms",
+            "sp",
+            "estagio"
+          ],
+          "texto": "Secretaria Municipal da Saúde de São Paulo: programa de estágio remunerado para universitários, em unidades de saúde e setores administrativos. As vagas dependem do curso e da disponibilidade. Página: https://smartsampa.prefeitura.sp.gov.br/web/saude/w/estagiosms"
+        },
+        {
+          "titulo": "COVISA",
+          "tags": [
+            "covisa",
+            "vigilancia",
+            "saude",
+            "publica",
+            "enfermagem",
+            "epidemiologica"
+          ],
+          "texto": "COVISA (Coordenadoria de Vigilância em Saúde): divulga estágios em vigilância sanitária e epidemiológica, com vagas para estudantes de Saúde Pública, Enfermagem e áreas relacionadas. Página: https://smartsampa.prefeitura.sp.gov.br/web/saude/w/vigilancia_em_saude/estagio_covisa"
+        },
+        {
+          "titulo": "ICESP",
+          "tags": [
+            "icesp",
+            "cancer",
+            "hospital",
+            "convenio",
+            "multiprofissional"
+          ],
+          "texto": "ICESP (Instituto do Câncer do Estado de São Paulo): formação e estágios multiprofissionais. Algumas vagas exigem convênio entre a faculdade e o hospital. Para estudantes de Medicina, é preciso consultar a FMUSP. Página: https://icesp.org.br/estagios/"
+        },
+        {
+          "titulo": "Ministério da Saúde",
+          "tags": [
+            "ministerio",
+            "saude",
+            "gestao",
+            "politicas",
+            "publicas",
+            "nivel",
+            "medio",
+            "superior"
+          ],
+          "texto": "Ministério da Saúde: programa de estágio para estudantes de nível médio e superior, com experiências em gestão e políticas públicas de saúde. A disponibilidade depende da unidade e do processo seletivo. Página: https://www.gov.br/saude/pt-br/acesso-a-informacao/estagio"
+        },
+        {
+          "titulo": "Estágio e internato em Medicina",
+          "tags": [
+            "medicina",
+            "internato",
+            "estagio",
+            "graduacao",
+            "pratica",
+            "supervisionada"
+          ],
+          "texto": "Durante a graduação em Medicina há atividades práticas supervisionadas. Nas etapas finais, o internato médico faz parte da formação obrigatória. Também existem estágios opcionais e experiências em hospitais, conforme as regras da universidade e os convênios. Não confunda internato, que é obrigatório, com estágio extracurricular. Verifique sempre os requisitos e se a oportunidade está aberta."
+        }
       ]
     }
   ]

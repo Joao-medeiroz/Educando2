@@ -85,3 +85,26 @@ def test_buscar_vagas_abertas_usa_a_pesquisa_e_registra_as_fontes(monkeypatch):
     assert "marketing" in chamadas[0] and "júnior" in chamadas[0]
     assert "Inscrições até 30/11" in saida
     assert {f["link"] for f in agente._fontes.get()} == {"https://www.vagas.com.br/vaga-1"}
+
+
+
+def test_botao_cursos_nao_traz_estagio(monkeypatch):
+    saida = json.loads(agente.consultar_base("cursos", "faculdades"))
+    assert all(o["categoria"] == "cursos" for o in saida)
+
+
+def test_sinonimo_de_categoria_e_normalizado():
+    saida = json.loads(agente.consultar_base("estágio", "marketing"))
+    assert all(o["categoria"] == "emprego" for o in saida)
+
+
+def test_guia_devolve_so_a_secao_pedida():
+    resultado = json.loads(agente.consultar_guia("fuvest calendario"))
+    secoes = [t["secao"] for t in resultado["trechos"]]
+    assert "Calendário 2027" in secoes
+    assert sum(len(t["texto"]) for t in resultado["trechos"]) <= 2400
+
+
+def test_guia_de_programacao_pede_conferencia():
+    resultado = json.loads(agente.consultar_guia("programacao python"))
+    assert resultado["atencao"] is True
