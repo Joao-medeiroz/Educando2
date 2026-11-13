@@ -9,7 +9,7 @@
 (function () {
   const API_URL = window.EDUCANDO_API_URL ||
     (location.port === '5500' ? 'http://127.0.0.1:8000/api/chat' : '/api/chat');
-  const SAUDACAO = 'Oi, tudo bem? Eu sou o Edu, assistente do Educando. Você está precisando de alguma oportunidade?';
+  const SAUDACAO = 'Olá, tudo bem? Eu sou o Edu, assistente do Educando. Como posso te ajudar?';
   const LINK_VALIDO = /^https:\/\//;
   const CHAVE_ESTADO = 'educando_chat_v1';
   const CAMPOS_PERFIL = ['nome', 'area_interesse', 'situacao_atual', 'objetivo', 'expectativa', 'cidade_estado'];

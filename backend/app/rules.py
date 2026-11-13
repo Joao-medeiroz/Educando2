@@ -16,7 +16,7 @@ TERMOS_POR_CATEGORIA = {
     "intercambio": ["intercambio", "exterior", "internacional", "estudar fora"],
 }
 
-TEXTO_SAUDACAO = "Oi, tudo bem? Eu sou o Edu, assistente do Educando. Você está precisando de alguma oportunidade?"
+TEXTO_SAUDACAO = "Olá, tudo bem? Eu sou o Edu, assistente do Educando. Como posso te ajudar?"
 TEXTO_SEM_CATEGORIA = "Posso te ajudar com cursos, estágios e vagas, idiomas ou intercâmbio. Sobre qual deles você quer saber?"
 TEXTO_PERFIL = (
     "Que bom que você está explorando! Me conta um pouquinho: você está no ensino médio, na faculdade "

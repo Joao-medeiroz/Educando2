@@ -498,6 +498,856 @@
           "texto": "Durante a graduação em Medicina há atividades práticas supervisionadas. Nas etapas finais, o internato médico faz parte da formação obrigatória. Também existem estágios opcionais e experiências em hospitais, conforme as regras da universidade e os convênios. Não confunda internato, que é obrigatório, com estágio extracurricular. Verifique sempre os requisitos e se a oportunidade está aberta."
         }
       ]
+    },
+    {
+      "id": "ufpr-vestibular",
+      "titulo": "UFPR: vestibular e ingresso",
+      "tags": [
+        "ufpr",
+        "parana",
+        "curitiba",
+        "vestibular",
+        "ingresso",
+        "universidade",
+        "federal",
+        "publica"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "UFPR",
+          "link": "https://www.ufpr.br/"
+        },
+        {
+          "titulo": "Edital do vestibular (UFPR)",
+          "link": "https://servicos.nc.ufpr.br/PortalNC/Concurso?edital=9363"
+        },
+        {
+          "titulo": "Núcleo de Concursos (UFPR)",
+          "link": "https://www.nc.ufpr.br/"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Como funciona o ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "modalidade",
+            "sisu",
+            "prova",
+            "formato",
+            "questoes"
+          ],
+          "texto": "A UFPR é pública e gratuita. Tem vestibular próprio e outras modalidades, como o SISU. O Vestibular 2027 teve uma única fase: 80 questões objetivas (quatro alternativas cada) e duas discursivas. Música tem avaliação de habilidade específica."
+        },
+        {
+          "titulo": "Calendário 2027",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prazo",
+            "inscricao",
+            "inscricoes",
+            "prova",
+            "quando"
+          ],
+          "texto": "Inscrições: 18/05 a 20/07/2026 (encerradas). Prova principal: 01/11/2026 (realizada). Prova específica de Música: 02/11/2026 (realizada). Foram 4.603 vagas em 130 cursos."
+        },
+        {
+          "titulo": "Cotas e oportunidades",
+          "tags": [
+            "cota",
+            "cotas",
+            "bolsa",
+            "escola",
+            "publica",
+            "baixa",
+            "renda",
+            "indigena",
+            "quilombola"
+          ],
+          "texto": "Pelo menos 50% das vagas são para quem cursou integralmente o Ensino Médio em escola pública. Há modalidades para baixa renda, pessoas pretas e pardas, indígenas, quilombolas e pessoas com deficiência."
+        }
+      ]
+    },
+    {
+      "id": "ufrgs-vestibular",
+      "titulo": "UFRGS: vestibular e ingresso",
+      "tags": [
+        "ufrgs",
+        "rio",
+        "grande",
+        "sul",
+        "porto",
+        "alegre",
+        "vestibular",
+        "ingresso",
+        "universidade",
+        "federal"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "UFRGS",
+          "link": "https://www.ufrgs.br/"
+        },
+        {
+          "titulo": "Vestibular UFRGS",
+          "link": "https://vestibular.ufrgs.br/"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Como funciona o ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "vestibular",
+            "sisu",
+            "prova",
+            "peso",
+            "disciplinas"
+          ],
+          "texto": "A UFRGS é pública e gratuita, em Porto Alegre. Usa vestibular próprio e, conforme o edital, o ENEM/SISU. O vestibular tem provas objetivas e redação, com pesos por disciplina conforme o curso."
+        },
+        {
+          "titulo": "Calendário 2027",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prazo",
+            "inscricao",
+            "prova",
+            "quando"
+          ],
+          "texto": "Inscrições: 24/08 a 21/09/2026 (encerradas). Provas: 28 e 29/11/2026. São 15 questões objetivas por disciplina, em nove disciplinas, mais a redação. Dia 1: Biologia, Física, História, Matemática e Química. Dia 2: Geografia, Língua Portuguesa, Literatura, Língua Estrangeira e Redação. Início previsto às 14h30, com até 5h30 de prova por dia."
+        },
+        {
+          "titulo": "Cotas e assistência",
+          "tags": [
+            "cota",
+            "cotas",
+            "assistencia",
+            "moradia",
+            "alimentacao",
+            "permanencia",
+            "vulnerabilidade"
+          ],
+          "texto": "Há reserva de vagas para estudantes de escola pública e modalidades específicas de cotas. Estudantes em vulnerabilidade podem consultar programas de assistência estudantil (alimentação, moradia e permanência)."
+        }
+      ]
+    },
+    {
+      "id": "ufmg-ingresso",
+      "titulo": "UFMG: ingresso pelo SISU e Seriado",
+      "tags": [
+        "ufmg",
+        "minas",
+        "gerais",
+        "belo",
+        "horizonte",
+        "sisu",
+        "seriado",
+        "ingresso",
+        "universidade",
+        "federal"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "UFMG",
+          "link": "https://www.ufmg.br/"
+        },
+        {
+          "titulo": "Formas de ingresso (UFMG)",
+          "link": "https://www.ufmg.br/cursos/formas-de-ingresso/ingresso-na-graduacao/"
+        },
+        {
+          "titulo": "SISU (UFMG)",
+          "link": "https://www.ufmg.br/sisu/"
+        },
+        {
+          "titulo": "Acesso Único (SISU)",
+          "link": "https://acessounico.mec.gov.br/sisu"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Como funciona o ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "sisu",
+            "enem",
+            "seriado",
+            "artes",
+            "habilidades"
+          ],
+          "texto": "A UFMG é pública e gratuita, principalmente em Belo Horizonte. A forma principal é o ENEM pelo SISU. Também há o Seriado UFMG, em três etapas ao longo de três anos. Alguns cursos de Artes exigem provas de habilidades específicas. O calendário do SISU é divulgado pelo MEC; confira o edital da UFMG para cursos, vagas, pesos e documentos."
+        },
+        {
+          "titulo": "Cotas e assistência",
+          "tags": [
+            "cota",
+            "cotas",
+            "assistencia",
+            "vulnerabilidade",
+            "indigena",
+            "quilombola",
+            "deficiencia"
+          ],
+          "texto": "A UFMG reserva 50% das vagas para cotas, com critérios de escola pública, renda, raça, pertencimento indígena ou quilombola e deficiência. Há programas de assistência estudantil para a permanência de quem está em vulnerabilidade socioeconômica. Não confunda ingresso pelo SISU com processos seletivos específicos da universidade."
+        }
+      ]
+    },
+    {
+      "id": "unb-ingresso",
+      "titulo": "UnB: vestibular, PAS e SISU",
+      "tags": [
+        "unb",
+        "brasilia",
+        "vestibular",
+        "pas",
+        "seriada",
+        "sisu",
+        "libras",
+        "ingresso",
+        "universidade",
+        "federal"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "UnB",
+          "link": "https://www.unb.br/"
+        },
+        {
+          "titulo": "Vestibular UnB (Cebraspe)",
+          "link": "https://www.cebraspe.org.br/vestibulares/VESTUNB_27"
+        },
+        {
+          "titulo": "Cronograma (Vem pra UnB)",
+          "link": "https://vempraunb.unb.br/cronograma/"
+        },
+        {
+          "titulo": "Acesso Único (SISU)",
+          "link": "https://acessounico.mec.gov.br/sisu"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Formas de ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "vestibular",
+            "pas",
+            "sisu",
+            "libras"
+          ],
+          "texto": "A UnB é pública e gratuita. Formas de ingresso: vestibular tradicional; Programa de Avaliação Seriada (PAS); SISU, conforme a oferta; e processos específicos, como o vestibular para Libras."
+        },
+        {
+          "titulo": "Vestibular tradicional 2027",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prova",
+            "inscricao",
+            "taxa",
+            "vagas",
+            "redacao"
+          ],
+          "texto": "Inscrições: 28/08 a 17/09/2026 (encerradas). Taxa: R$ 173. Oferta: 1.074 vagas. Provas: 21 e 22/11/2026. Inclui provas de conhecimentos e redação em Língua Portuguesa."
+        },
+        {
+          "titulo": "PAS 2027",
+          "tags": [
+            "pas",
+            "seriada",
+            "etapa",
+            "calendario",
+            "data",
+            "datas"
+          ],
+          "texto": "O PAS permite concorrer a uma vaga por avaliações ao longo do Ensino Médio. Cronograma para 2027: PAS 3ª etapa em 29/11/2026; PAS 1ª etapa em 06/12/2026; PAS 2ª etapa em 13/12/2026."
+        }
+      ]
+    },
+    {
+      "id": "unesp-vestibular",
+      "titulo": "UNESP: vestibular da Vunesp e outras formas de ingresso",
+      "tags": [
+        "unesp",
+        "estadual",
+        "paulista",
+        "vunesp",
+        "vestibular",
+        "sao",
+        "paulo",
+        "ingresso",
+        "universidade"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "UNESP - vestibular",
+          "link": "https://vestibular.unesp.br/"
+        },
+        {
+          "titulo": "Vunesp",
+          "link": "https://www.vunesp.com.br/"
+        },
+        {
+          "titulo": "UNESP",
+          "link": "https://www.unesp.br/"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Como funciona o ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "vestibular",
+            "fase",
+            "enem",
+            "provao",
+            "olimpiadas"
+          ],
+          "texto": "A UNESP é pública e gratuita, com unidades em várias cidades. O vestibular próprio é organizado pela Fundação Vunesp, em duas fases. Também há seleção pela nota do ENEM (Processo Seletivo UNESP-ENEM), Provão Paulista Seriado e processos para participantes de olimpíadas científicas, conforme os editais."
+        },
+        {
+          "titulo": "Vestibular 2027",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prova",
+            "fase",
+            "inscricao",
+            "vagas",
+            "resultado"
+          ],
+          "texto": "Inscrições: 04/09 a 26/10/2026 (encerradas). Primeira fase: 22/11/2026, com 90 questões de múltipla escolha. Segunda fase: 13 e 14/12/2026, com 36 questões discursivas e redação. Resultado final previsto para 27/01/2027. São 5.850 vagas em 137 cursos. Outras vias para 2027: 726 vagas no UNESP-ENEM e 929 no Provão Paulista Seriado."
+        },
+        {
+          "titulo": "Cotas",
+          "tags": [
+            "cota",
+            "cotas",
+            "escola",
+            "publica",
+            "preto",
+            "pardo",
+            "indigena",
+            "assistencia"
+          ],
+          "texto": "50% das vagas são para quem cursou o Ensino Médio em escola pública. Dentro dessas vagas há critérios para candidatos pretos, pardos e indígenas. Há programas de permanência e assistência socioeconômica."
+        }
+      ]
+    },
+    {
+      "id": "uerj-vestibular",
+      "titulo": "UERJ: vestibular estadual em três exames",
+      "tags": [
+        "uerj",
+        "rio",
+        "janeiro",
+        "estadual",
+        "vestibular",
+        "qualificacao",
+        "discursivo",
+        "ingresso",
+        "universidade"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "UERJ - vestibular",
+          "link": "https://www.uerj.br/vestibular/"
+        },
+        {
+          "titulo": "Vestibular UERJ",
+          "link": "https://www.vestibular.uerj.br/"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Como funciona o ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "exame",
+            "qualificacao",
+            "discursivo",
+            "conceito",
+            "acertos"
+          ],
+          "texto": "A UERJ é pública e gratuita, com unidades em vários municípios do RJ. O vestibular tem três momentos: Primeiro e Segundo Exames de Qualificação (múltipla escolha) e Exame Discursivo. É preciso acertar mais de 40% em pelo menos um dos exames de qualificação para seguir à etapa discursiva. A pontuação de qualificação também influencia o resultado final."
+        },
+        {
+          "titulo": "Calendário 2027",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prova",
+            "inscricao",
+            "vagas",
+            "discursivo"
+          ],
+          "texto": "Inscrições para o Exame Discursivo: 12/09 a 07/10/2026 (encerradas). Prova discursiva: 29/11/2026. Foram anunciadas 6.031 vagas."
+        },
+        {
+          "titulo": "Exame Discursivo e cotas",
+          "tags": [
+            "cota",
+            "cotas",
+            "redacao",
+            "discursivo",
+            "disciplinas",
+            "negros",
+            "indigenas",
+            "quilombolas"
+          ],
+          "texto": "O Exame Discursivo tem redação, aplicada a todos, e duas provas de disciplinas específicas conforme o curso. A UERJ reserva vagas para estudantes de escola pública, pessoas negras, indígenas, quilombolas e pessoas com deficiência, conforme renda e legislação estadual."
+        }
+      ]
+    },
+    {
+      "id": "fgv-ingresso",
+      "titulo": "FGV: vestibular, ENEM e bolsas",
+      "tags": [
+        "fgv",
+        "getulio",
+        "vargas",
+        "vestibular",
+        "ingresso",
+        "bolsa",
+        "bolsas",
+        "direito",
+        "administracao",
+        "economia"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "Vestibular FGV",
+          "link": "https://vestibular.fgv.br/"
+        },
+        {
+          "titulo": "Bolsas de estudo (FGV)",
+          "link": "https://vestibular.fgv.br/bolsas-de-estudo"
+        },
+        {
+          "titulo": "Vestibular por Demanda Social e Diversidade",
+          "link": "https://vestibular.fgv.br/formas-de-ingresso/vestibular-por-demanda-social-e-diversidade"
+        },
+        {
+          "titulo": "ENEM na FGV",
+          "link": "https://vestibular.fgv.br/formas-de-ingresso/enem"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Formas de ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "vestibular",
+            "enem",
+            "olimpiadas",
+            "exames",
+            "internacionais"
+          ],
+          "texto": "A FGV é privada, com unidades em São Paulo, Rio de Janeiro e Brasília. Cursos em Administração, Economia, Direito, Administração Pública, Relações Internacionais, Ciência de Dados e outros. Ingresso por vestibular próprio, nota do ENEM, Olimpíadas do Conhecimento (cursos específicos) e exames internacionais, conforme cada escola."
+        },
+        {
+          "titulo": "Processo seletivo 2027.1",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prazo",
+            "inscricao",
+            "prova",
+            "enem",
+            "isencao"
+          ],
+          "texto": "Vestibular tradicional: inscrições 27/07 a 16/09/2026 (encerradas); provas 18 e 19/10/2026 (realizadas). Ingresso pela nota do ENEM: inscrições até 08/01/2027, às 18h. Pedido de isenção no processo via ENEM: até 05/01/2027."
+        },
+        {
+          "titulo": "Bolsas FGV",
+          "tags": [
+            "bolsa",
+            "bolsas",
+            "merito",
+            "demanda",
+            "social",
+            "restituivel",
+            "talentos",
+            "dsd",
+            "diversidade",
+            "cotas"
+          ],
+          "texto": "Bolsa de mérito: para aprovados, conforme critérios de cada escola. Bolsa por demanda social: para quem comprova necessidade socioeconômica. Bolsa restituível: funciona como financiamento e pode exigir devolução. Seleção de Talentos: para estudantes de escola pública com destaque na Olimpíada Brasileira de Matemática das Escolas Públicas, em cursos específicos no Rio de Janeiro. Vestibular por Demanda Social e Diversidade (DSD): vagas específicas em alguns cursos para quem estudou em escola pública, teve bolsa integral por necessidade em escola particular ou se declara preto, pardo ou indígena. Percentuais e critérios variam; aprovação não garante bolsa."
+        }
+      ]
+    },
+    {
+      "id": "mackenzie-ingresso",
+      "titulo": "Mackenzie: vestibular, ENEM e bolsas",
+      "tags": [
+        "mackenzie",
+        "presbiteriana",
+        "vestibular",
+        "ingresso",
+        "bolsa",
+        "bolsas",
+        "prouni",
+        "filantropica",
+        "alphaville",
+        "campinas"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "Mackenzie",
+          "link": "https://www.mackenzie.br/"
+        },
+        {
+          "titulo": "Processos seletivos (Mackenzie)",
+          "link": "https://www.mackenzie.br/processos-seletivos/"
+        },
+        {
+          "titulo": "Bolsa filantrópica (graduação)",
+          "link": "https://www.mackenzie.br/responsabilidade-social/coordenacao-de-bolsas-de-estudo/filantropia/graduacao"
+        },
+        {
+          "titulo": "ProUni (Mackenzie)",
+          "link": "https://portal.mackenzie.br/responsabilidade-social/coordenacao-de-bolsas-de-estudo/prouni/ingresso-e-renovacao"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Formas de ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "vestibular",
+            "enem",
+            "modalidade",
+            "campus"
+          ],
+          "texto": "Universidade privada. Formas de ingresso: vestibular próprio, aproveitamento da nota do ENEM e modalidades específicas, conforme campus e curso."
+        },
+        {
+          "titulo": "Vestibular 2027.1",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prova",
+            "inscricao",
+            "alphaville",
+            "campinas",
+            "higienopolis",
+            "enem"
+          ],
+          "texto": "Higienópolis: inscrições até 11/11/2026 (encerradas); provas 25 e 26/11/2026. Alphaville e Campinas: inscrições até 17/11/2026; provas em 28/11/2026. Também é possível usar o ENEM de 2023, 2024 ou 2025."
+        },
+        {
+          "titulo": "Bolsas Mackenzie",
+          "tags": [
+            "bolsa",
+            "bolsas",
+            "prouni",
+            "integral",
+            "filantropica",
+            "renda",
+            "salario"
+          ],
+          "texto": "ProUni: bolsa integral de 100% para renda familiar bruta por pessoa de até 1,5 salário mínimo, além dos demais requisitos do programa. O calendário de 2027.1 depende do MEC. Bolsa filantrópica: para aprovados e estudantes com critérios socioeconômicos, geralmente em primeira graduação, conforme disponibilidade e análise documental. Bolsa filantrópica não é desconto comercial nem financiamento."
+        }
+      ]
+    },
+    {
+      "id": "puc-sp-ingresso",
+      "titulo": "PUC-SP: vestibular, ProUni e bolsas",
+      "tags": [
+        "puc",
+        "pucsp",
+        "catolica",
+        "sao",
+        "paulo",
+        "vestibular",
+        "ingresso",
+        "bolsa",
+        "bolsas",
+        "fundasp",
+        "fies",
+        "prouni"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "PUC-SP",
+          "link": "https://www.pucsp.br/"
+        },
+        {
+          "titulo": "Vestibular PUC-SP 2027 (NUCVEST)",
+          "link": "https://www.nucvest.com.br/pucsp/vestibular/2027/verao/index.html"
+        },
+        {
+          "titulo": "Bolsas e financiamentos (PUC-SP)",
+          "link": "https://pucsp.br/bolsas-e-financiamentos"
+        },
+        {
+          "titulo": "ProUni",
+          "link": "https://acessounico.mec.gov.br/prouni"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Como funciona o ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "vestibular",
+            "nucvest",
+            "prouni",
+            "complementar"
+          ],
+          "texto": "PUC-SP é privada, em São Paulo. Vestibular próprio, organizado pela NUCVEST. Há processos complementares conforme edital, e ingresso por ProUni conforme as vagas e as regras do MEC. Observação: PUC-Rio, PUC-Campinas e PUC-Minas têm processos e bolsas próprios."
+        },
+        {
+          "titulo": "Calendário 2027.1",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prova",
+            "inscricao",
+            "chamada",
+            "matricula"
+          ],
+          "texto": "Inscrições: 06/08 a 02/10/2026 (encerradas). Prova: 17/10/2026 (realizada). Primeira chamada divulgada em 10/11/2026; matrícula de 10 a 23/11/2026. Segunda chamada prevista para 09/12/2026. Terceira chamada prevista para 13/01/2027."
+        },
+        {
+          "titulo": "Bolsas PUC-SP",
+          "tags": [
+            "bolsa",
+            "bolsas",
+            "fundasp",
+            "ser",
+            "fies",
+            "renda",
+            "salario",
+            "prouni"
+          ],
+          "texto": "ProUni: bolsa integral ou parcial, conforme regras do MEC. Bolsa FUNDASP: por critérios socioeconômicos; integral para renda familiar bruta por pessoa de até 1,5 salário mínimo; parcial de 50% para até 3 salários mínimos, quando previsto no edital. Bolsa Ser PUC: fundo da instituição para quem tem dificuldades financeiras e não se enquadra em outras modalidades (sem edital aberto na consulta). FIES: financiamento federal, sujeito às regras e vagas do programa. A aprovação não garante a bolsa FUNDASP."
+        }
+      ]
+    },
+    {
+      "id": "insper-ingresso",
+      "titulo": "Insper: vestibular e bolsas",
+      "tags": [
+        "insper",
+        "vestibular",
+        "ingresso",
+        "bolsa",
+        "bolsas",
+        "sat",
+        "ib",
+        "enem",
+        "sao",
+        "paulo"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "Vestibular Insper",
+          "link": "https://www.insper.edu.br/pt/cursos/vestibular"
+        },
+        {
+          "titulo": "Bolsas de estudo (Insper)",
+          "link": "https://www.insper.edu.br/pt/cursos/vestibular/bolsas-de-estudo"
+        },
+        {
+          "titulo": "Graduação (Insper)",
+          "link": "https://www.insper.edu.br/pt/cursos/graduacao"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Formas de ingresso e prova",
+          "tags": [
+            "ingresso",
+            "forma",
+            "vestibular",
+            "enem",
+            "sat",
+            "ib",
+            "olimpiadas",
+            "prova",
+            "redacao"
+          ],
+          "texto": "Insper é privada, em São Paulo. Ingresso por vestibular próprio, nota do ENEM (últimos três anos, conforme edital), SAT, International Baccalaureate (IB) e Olimpíadas do Conhecimento. Prova de 60 questões de múltipla escolha e uma redação. Prova de 2027.1 realizada em 11/10/2026; inscrições encerradas em 17/09/2026."
+        },
+        {
+          "titulo": "Bolsas Insper",
+          "tags": [
+            "bolsa",
+            "bolsas",
+            "integral",
+            "parcial",
+            "renda",
+            "salario",
+            "auxilio",
+            "intercambio"
+          ],
+          "texto": "Programa próprio de bolsas integrais e parciais não restituíveis. Integral: renda familiar mensal de até 2 salários mínimos por pessoa. Parcial: cobre 50% ou 75% da matrícula e mensalidade, para renda acima de 2 e até 4,5 salários mínimos por pessoa. Bolsistas integrais podem ter auxílios complementares (moradia, manutenção, notebook, inglês e intercâmbio), conforme critérios. A solicitação deve ser feita durante a inscrição; aprovação não garante bolsa. Para 2027.1, o prazo já encerrou."
+        }
+      ]
+    },
+    {
+      "id": "espm-ingresso",
+      "titulo": "ESPM: vestibular, ENEM e bolsas",
+      "tags": [
+        "espm",
+        "propaganda",
+        "marketing",
+        "vestibular",
+        "ingresso",
+        "bolsa",
+        "bolsas",
+        "restituivel",
+        "enem",
+        "sao",
+        "paulo",
+        "rio"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "ESPM - processos seletivos",
+          "link": "https://www.espm.br/cursos-de-graduacao/processos-seletivos/vestibular/"
+        },
+        {
+          "titulo": "Bolsas e benefícios (ESPM)",
+          "link": "https://www.espm.br/cursos-de-graduacao/estude-na-espm/bolsas-e-beneficios/"
+        },
+        {
+          "titulo": "Editais (ESPM)",
+          "link": "https://www.espm.br/centra-de-conhecimento/editais/"
+        },
+        {
+          "titulo": "ESPM",
+          "link": "https://www.espm.br/"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Formas de ingresso",
+          "tags": [
+            "ingresso",
+            "forma",
+            "vestibular",
+            "enem",
+            "internacional",
+            "transferencia",
+            "segunda"
+          ],
+          "texto": "Privada, com unidades em São Paulo e Rio de Janeiro; cursos de Comunicação, Marketing, Publicidade, Administração, Relações Internacionais e Tecnologia. Ingresso por vestibular próprio, nota do ENEM, processos internacionais e transferência ou segunda graduação, conforme edital."
+        },
+        {
+          "titulo": "Calendário 2027.1",
+          "tags": [
+            "calendario",
+            "data",
+            "datas",
+            "prova",
+            "inscricao",
+            "entrevista",
+            "resultado",
+            "presencial"
+          ],
+          "texto": "Inscrições até 24/11/2026. Entrevista on-line: 28/09 a 24/11/2026. Prova presencial: 29/11/2026, em várias cidades (São Paulo, Rio de Janeiro, Brasília, Belo Horizonte, Curitiba, Recife, Salvador e Ribeirão Preto). Resultado: 03/12/2026."
+        },
+        {
+          "titulo": "Bolsas ESPM",
+          "tags": [
+            "bolsa",
+            "bolsas",
+            "meritocratica",
+            "integral",
+            "parcial",
+            "restituivel",
+            "fiador",
+            "renda",
+            "salario"
+          ],
+          "texto": "Bolsa Social Meritocrática (Vestibular): 50% ou 100%. Integral: renda familiar bruta por pessoa de até 1,5 salário mínimo; 50%: de 1,5 a 3 salários mínimos. Para 2027.1: 47 bolsas em São Paulo e 28 no Rio. Considera desempenho e análise socioeconômica. Bolsa Social Meritocrática ENEM: integral de 100% para renda de até 1,5 salário mínimo por pessoa, em períodos de seleção. Bolsa Parcial Restituível: financiamento de 30%, 50% ou 70%, para renda de 2 a 5 salários mínimos por pessoa, com fiador. Prazos: Vestibular até 30/11/2026; ENEM II até 24/11/2026; ENEM III de 24/11/2026 a 19/01/2027."
+        }
+      ]
+    },
+    {
+      "id": "bolsas-assistencia-geral",
+      "titulo": "Bolsas, assistência estudantil e financiamento: orientação geral",
+      "tags": [
+        "bolsa",
+        "bolsas",
+        "assistencia",
+        "financiamento",
+        "fies",
+        "prouni",
+        "permanencia",
+        "publica",
+        "privada",
+        "orientacao"
+      ],
+      "status": "conferir_no_site",
+      "fontes": [
+        {
+          "titulo": "Portal do MEC",
+          "link": "https://www.gov.br/mec/pt-br"
+        },
+        {
+          "titulo": "ProUni (Acesso Único)",
+          "link": "https://acessounico.mec.gov.br/prouni"
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "Públicas e privadas",
+          "tags": [
+            "publica",
+            "privada",
+            "mensalidade",
+            "gratuita",
+            "diferenca"
+          ],
+          "texto": "Universidades públicas não cobram mensalidade na graduação regular e podem oferecer assistência estudantil (alimentação, moradia, transporte, materiais e permanência), com critérios socioeconômicos e editais próprios. Universidades privadas podem oferecer bolsas de mérito, sociais, institucionais, descontos e financiamentos. ProUni: bolsas integrais e parciais pelo MEC. FIES: financiamento que precisa ser pago, não é bolsa gratuita."
+        },
+        {
+          "titulo": "Como orientar",
+          "tags": [
+            "orientar",
+            "passo",
+            "roteiro",
+            "comparar",
+            "bolsa",
+            "instituicao"
+          ],
+          "texto": "Identifique instituição, curso e campus; verifique formas de ingresso (vestibular, ENEM, SISU, transferência); pesquise bolsas integrais, parciais, sociais e de mérito; confira renda por pessoa, documentos e prazos; diferencie bolsa não restituível de financiamento; informe quando a inscrição estiver encerrada ou o edital ainda não tiver sido publicado. Nunca prometa bolsa ou vaga sem confirmação no edital."
+        }
+      ]
     }
   ]
 }

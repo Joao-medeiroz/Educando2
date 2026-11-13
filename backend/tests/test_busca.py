@@ -87,7 +87,8 @@ def test_guia_so_responde_se_cobrir_todas_as_palavras_especificas():
 
 def test_palavras_comuns_nao_escolhem_guia_gratuito():
     from app import guias
-    assert guias.buscar_guia(["saber", "fgv"]) is None
+    assert guias.buscar_guia(["saber", "xyzqwe"]) is None
+    assert guias.buscar_guia(["saber", "fgv"])["id"] == "fgv-ingresso"
 
 
 
