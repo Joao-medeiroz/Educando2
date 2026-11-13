@@ -108,3 +108,18 @@ def test_guia_devolve_so_a_secao_pedida():
 def test_guia_de_programacao_pede_conferencia():
     resultado = json.loads(agente.consultar_guia("programacao python"))
     assert resultado["atencao"] is True
+
+
+
+def test_resposta_do_agente_nunca_passa_de_quatro_links(monkeypatch):
+    cards = [{"titulo": f"Vaga {i}", "descricao": "x", "link": f"https://site{i}.example/vaga",
+              "categoria": "emprego", "tipo": "Estágio", "local": "SP"} for i in range(6)]
+    fontes = [{"titulo": f"Fonte {i}", "link": f"https://fonte{i}.example/p", "trecho": "x"} for i in range(3)]
+    texto = " ".join(f"https://fonte{i}.example/p" for i in range(3)) + " e https://site0.example/vaga."
+    resultado = {"texto": texto, "fontes": fontes, "oportunidades": cards, "perfil": {}}
+    monkeypatch.setattr(agente, "responder", lambda *a, **k: resultado)
+    from fastapi.testclient import TestClient
+    resposta = TestClient(main.app).post("/api/chat", json={"mensagem": "vagas de estágio"}).json()
+    total = len(resposta["oportunidades"]) + len(resposta["opcoes_online"])
+    total += len(set(__import__("re").findall(r"https://[^\s)]+", resposta["texto"])))
+    assert total <= 4

@@ -184,17 +184,48 @@ def _orientar(mensagem, historico, explicito: bool) -> ChatResponse:
     return ChatResponse(texto=texto, opcoes_online=opcoes + _links_do_site(), origem="ia")
 
 
+MAXIMO_LINKS = 4  # links visíveis por resposta (no texto, nos cards e nas opções somados)
+MARKDOWN_RE = re.compile(r"\[([^\]]+)\]\(\s*((?:https?://|www\.)[^)\s]+)\s*\)")
+
+
+def _limitar_links_no_texto(texto):
+    """Mantém no texto no máximo MAXIMO_LINKS endereços distintos. Devolve o texto e quantos ficaram."""
+    usados = set()
+
+    def markdown(m):
+        chave = _chave_url(m.group(2))
+        if chave in usados or len(usados) < MAXIMO_LINKS:
+            usados.add(chave)
+            return m.group(0)
+        return m.group(1)
+
+    def solto(m):
+        chave = _chave_url(m.group(0))
+        if chave in usados or len(usados) < MAXIMO_LINKS:
+            usados.add(chave)
+            return m.group(0)
+        return ""
+
+    texto = MARKDOWN_RE.sub(markdown, texto)
+    texto = URL_RE.sub(solto, texto)
+    return texto, len(usados)
+
+
 def _resposta_do_agente(mensagem, resultado) -> ChatResponse:
     """Monta a resposta do agente: só endereços vindos das ferramentas podem aparecer no texto."""
     _perfil_extraido.set(resultado["perfil"])
     permitidos = {f["link"] for f in resultado["fontes"]} | {o["link"] for o in resultado["oportunidades"]}
     permitidos |= {l.link for l in _links_do_site()}
     texto = _filtrar_urls(resultado["texto"], permitidos)
-    cards = [Oportunidade(**o) for o in resultado["oportunidades"]]
+    texto, no_texto = _limitar_links_no_texto(texto)
+    vagas = MAXIMO_LINKS - no_texto
+    cards = [Oportunidade(**o) for o in resultado["oportunidades"]][:vagas]
+    vagas -= len(cards)
     links_cards = {o["link"] for o in resultado["oportunidades"]}
     opcoes = [OpcaoOnline(titulo=f["titulo"][:80], descricao="Saiba mais", link=f["link"])
               for f in resultado["fontes"] if f["link"] not in links_cards]
-    return ChatResponse(texto=texto, oportunidades=cards, opcoes_online=opcoes + _links_do_site(), origem="agente")
+    opcoes = (opcoes + _links_do_site())[:max(vagas, 0)]
+    return ChatResponse(texto=texto, oportunidades=cards, opcoes_online=opcoes, origem="agente")
 
 
 def _responder(corpo: ChatRequest, request: Request) -> ChatResponse:

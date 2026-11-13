@@ -24,6 +24,38 @@
   "itens": {
     "cursos": [
       {
+        "tipo": "Curso gratuito",
+        "titulo": "Lógica de Programação (SENAI)",
+        "descricao": "Curso online gratuito de 14 horas, com algoritmos, raciocínio lógico e fundamentos da programação. Bom para quem começa do zero.",
+        "local": "Online",
+        "link": "https://www.sp.senai.br/curso/competencia-transversal-logica-de-programacao/95088",
+        "imagem": "./assets/images/oportunidades/course-1.jpg"
+      },
+      {
+        "tipo": "Curso gratuito",
+        "titulo": "Python Básico (Fundação Bradesco - Escola Virtual)",
+        "descricao": "Curso online gratuito de 18 horas, nível iniciante: lógica, variáveis, estruturas condicionais e funções em Python.",
+        "local": "Online",
+        "link": "https://www.ev.org.br/cursos/linguagem-de-programacao-python-basico",
+        "imagem": "./assets/images/oportunidades/course-2.jpg"
+      },
+      {
+        "tipo": "Curso",
+        "titulo": "Lógica de Programação e Python (SENAC)",
+        "descricao": "Curso presencial de algoritmos e fundamentos de Python. Pode ser gratuito pelo Programa Senac de Gratuidade; confira a unidade e as turmas.",
+        "local": "Presencial, São Paulo",
+        "link": "https://www.sp.senac.br/bolsas-de-estudo",
+        "imagem": "./assets/images/oportunidades/course-3.jpg"
+      },
+      {
+        "tipo": "Curso gratuito",
+        "titulo": "Aprenda Mais (MEC)",
+        "descricao": "Cursos online gratuitos de introdução à programação e Python, com certificado conforme os critérios de conclusão.",
+        "local": "Online",
+        "link": "https://aprendamais.mec.gov.br/",
+        "imagem": "./assets/images/oportunidades/course-1.jpg"
+      },
+      {
         "tipo": "Prova",
         "titulo": "Enem",
         "descricao": "A nota do exame dá acesso ao Sisu, ao ProUni e ao Fies. A edição 2026 tem provas em 8 e 15 de novembro, e há isenção da taxa para quem se enquadra nos critérios.",

@@ -3,9 +3,8 @@
 /**
  * Assistente Edu.
  * - Conversa com /api/chat.
- * - Guarda histórico e perfil SOMENTE no navegador da pessoa (localStorage),. A autorização de dados será tratada no login.
- * - O servidor não guarda nada: recebe o perfil a cada mensagem e devolve o que a conversa revelou.
- * - Todo texto vindo da API é inserido com textContent (nunca innerHTML).
+ * - Guarda histórico e perfil no navegador da pessoa (localStorage).
+ * - Todo texto vindo da API é montado com elementos e textContent (nunca innerHTML).
  */
 (function () {
   const API_URL = window.EDUCANDO_API_URL ||
@@ -15,6 +14,13 @@
   const CHAVE_ESTADO = 'educando_chat_v1';
   const CAMPOS_PERFIL = ['nome', 'area_interesse', 'situacao_atual', 'objetivo', 'expectativa', 'cidade_estado'];
   const MAX_MENSAGENS = 40;
+
+  // Formatação: **negrito**, *itálico*, __sublinhado__ e links (https:// ou www., ou [texto](endereço)).
+  const PADRAO_FORMATO = /\[([^\]]+)\]\(\s*((?:https?:\/\/|www\.)[^)\s]+)\s*\)|((?:https?:\/\/|www\.)[^\s)<>"']+)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\n]+)\*/g;
+  const RE_SEPARADOR = /^(\*\s*\*\s*\*+|-{3,}|_{3,})$/;
+  const RE_TITULO = /^#{1,6}\s+(.*)$/;
+  const RE_ITEM = /^[-•*]\s+(.*)$/;
+  const RE_NUMERO = /^\d+[.)]\s+(.*)$/;
 
   const botao = document.querySelector('[data-chatbot-toggle]');
   if (!botao) return;
@@ -76,7 +82,7 @@
     registrar({ tipo: 'texto', autor: 'bot', texto: SAUDACAO });
   }
 
-  // ---------- Renderização ----------
+  // ---------- Montagem segura de elementos ----------
   function criarTexto(tag, texto, estilo) {
     const el = document.createElement(tag);
     el.textContent = texto;
@@ -85,10 +91,6 @@
   }
 
   function rolarParaFim() { log.scrollTop = log.scrollHeight; }
-
-  // Escreve o texto com formatação simples: **negrito**, *itálico*, __sublinhado__ e links.
-  // Tudo é montado com elementos e textContent, nunca com innerHTML.
-  const PADRAO_FORMATO = /\[([^\]]+)\]\(\s*((?:https?:\/\/|www\.)[^)\s]+)\s*\)|((?:https?:\/\/|www\.)[^\s)<>"']+)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\n]+)\*/g;
 
   function criarLink(texto, url) {
     const endereco = /^www\./.test(url) ? 'https://' + url : url;
@@ -101,6 +103,7 @@
     return link;
   }
 
+  // Escreve um trecho de texto aplicando negrito, itálico, sublinhado e links.
   function anexarTextoComLinks(elemento, texto) {
     const original = String(texto);
     let ultimo = 0;
@@ -137,6 +140,7 @@
     }
   }
 
+  // ---------- Renderização ----------
   function desenharTexto(entrada) {
     const bolha = document.createElement('div');
     bolha.className = 'chat-' + (entrada.autor === 'user' ? 'user' : 'bot');
@@ -145,27 +149,71 @@
       log.appendChild(bolha);
       return;
     }
-    // Resposta do Edu: parágrafos separados por linha em branco; linhas com '• ' viram lista.
-    String(entrada.texto).split(/\n\s*\n/).forEach(function (bloco) {
-      const linhas = bloco.split('\n').map(function (l) { return l.trim(); }).filter(Boolean);
-      if (!linhas.length) return;
-      const ehLista = linhas.length > 0 && linhas.every(function (l) { return /^[•\-]\s/.test(l); });
-      if (ehLista) {
-        const ul = document.createElement('ul');
-        ul.className = 'chat-lista';
-        linhas.forEach(function (l) {
-          const li = document.createElement('li');
-          anexarTextoComLinks(li, l.replace(/^[•\-]\s*/, ''));
-          ul.appendChild(li);
-        });
-        bolha.appendChild(ul);
-      } else {
-        const paragrafo = document.createElement('p');
-        paragrafo.className = 'chat-paragrafo';
-        anexarTextoComLinks(paragrafo, linhas.join(' '));
-        bolha.appendChild(paragrafo);
+
+    // Resposta do Edu: títulos (#), separadores (---), listas (- ou 1.) e parágrafos.
+    let paragrafo = [];
+    let lista = null;
+    let tipoLista = null;
+
+    function fecharParagrafo() {
+      if (!paragrafo.length) return;
+      const p = document.createElement('p');
+      p.className = 'chat-paragrafo';
+      anexarTextoComLinks(p, paragrafo.join(' '));
+      bolha.appendChild(p);
+      paragrafo = [];
+    }
+
+    function fecharLista() {
+      if (!lista) return;
+      bolha.appendChild(lista);
+      lista = null;
+      tipoLista = null;
+    }
+
+    String(entrada.texto).split('\n').forEach(function (bruta) {
+      const linha = bruta.trim();
+      if (!linha) { fecharParagrafo(); fecharLista(); return; }
+
+      if (RE_SEPARADOR.test(linha)) {
+        fecharParagrafo(); fecharLista();
+        const separador = document.createElement('hr');
+        separador.className = 'chat-sep';
+        bolha.appendChild(separador);
+        return;
       }
+
+      const titulo = linha.match(RE_TITULO);
+      if (titulo) {
+        fecharParagrafo(); fecharLista();
+        const h = document.createElement('p');
+        h.className = 'chat-titulo';
+        anexarTextoComLinks(h, titulo[1]);
+        bolha.appendChild(h);
+        return;
+      }
+
+      const numero = linha.match(RE_NUMERO);
+      const item = numero ? { tipo: 'ol', texto: numero[1] } : (linha.match(RE_ITEM) ? { tipo: 'ul', texto: linha.match(RE_ITEM)[1] } : null);
+      if (item) {
+        fecharParagrafo();
+        if (!lista || tipoLista !== item.tipo) {
+          fecharLista();
+          lista = document.createElement(item.tipo);
+          lista.className = item.tipo === 'ol' ? 'chat-lista chat-lista-numero' : 'chat-lista';
+          tipoLista = item.tipo;
+        }
+        const li = document.createElement('li');
+        anexarTextoComLinks(li, item.texto);
+        lista.appendChild(li);
+        return;
+      }
+
+      fecharLista();
+      paragrafo.push(linha);
     });
+    fecharParagrafo();
+    fecharLista();
     log.appendChild(bolha);
   }
 
@@ -326,7 +374,6 @@
 
   painel.querySelector('[data-chatbot-apagar]').addEventListener('click', apagarTudo);
 
-  // Ao abrir a página, pergunta à API se o chat está disponível.
   fetch(API_URL.replace('/api/chat', '/api/status'))
     .then(function (r) { return r.json(); })
     .then(function (dados) { if (dados && dados.disponivel === false) desligarChat(); })

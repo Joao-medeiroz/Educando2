@@ -2963,3 +2963,27 @@ textarea.input { resize: vertical; min-height: 140px; }
 .chatbot .chat-lista em { font-style: italic; }
 .chatbot .chat-paragrafo u,
 .chatbot .chat-lista u { text-decoration: underline; text-underline-offset: 3px; }
+
+
+/* layout das respostas do Edu: títulos, separadores e listas numeradas */
+.chatbot .chat-titulo {
+  margin: 6px 0 2px;
+  font-family: var(--ff-league_spartan);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--eerie-black-1);
+  line-height: 1.35;
+}
+.chatbot .chat-sep {
+  border: 0;
+  border-top: 1px solid var(--platinum);
+  margin: 8px 0;
+}
+.chatbot .chat-lista-numero {
+  list-style: decimal;
+  margin: 0;
+  padding-left: 22px;
+}
+.chatbot .chat-lista li::marker,
+.chatbot .chat-lista-numero li::marker { color: var(--kappel); font-weight: 600; }
+.chatbot .chat-lista li + li { margin-top: 2px; }
